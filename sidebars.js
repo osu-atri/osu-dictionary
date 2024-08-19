@@ -65,6 +65,7 @@ const sidebars = {
       collapsed: false,
       items: [
         'lazer/lazermap2st',
+        'lazer/ruleset-man',
       ],
     },    
   ],
