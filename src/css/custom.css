@@ -119,6 +119,11 @@
       background-repeat: repeat-x;
     }
   }
+
+  .hero__title,
+  .hero__subtitle {
+    color: white;
+  }
 }
 
 @font-face {
