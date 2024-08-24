@@ -182,3 +182,12 @@
   color: var(--link-accent);
   animation: hue 0.25s ease forwards, enlarge 0.25s ease forwards;
 }
+
+.hero,
+.hero--primary {
+  background: url("/img/topbkg.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-blend-mode: color;
+}
