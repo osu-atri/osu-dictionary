@@ -4,6 +4,46 @@
  * work well for content-centric websites.
  */
 
+@keyframes shrink {
+  from {
+    transform: scale(1.15);
+    font-weight: 800;
+  }
+  to {
+    transform: scale(1);
+    font-weight: 400;
+  }
+}
+
+@keyframes enlarge {
+  from {
+    transform: scale(1);
+    font-weight: 400;
+  }
+  to {
+    transform: scale(1.15);
+    font-weight: 800;
+  }
+}
+
+@keyframes hue {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+  to {
+    background: rgba(255, 114, 177, 0.7);
+  }
+}
+
+@keyframes hueback {
+  from {
+    background: rgba(255, 114, 177, 0.7);
+  }
+  to {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #ff4296;
@@ -26,11 +66,11 @@
   .navbar {
     background: rgba(255, 179, 212, 0.6);
     backdrop-filter: blur(25px);
-    background-image: url('assets/trianglesNavbar.png');
+    background-image: url("assets/trianglesNavbar.png");
     background-position: bottom;
     background-size: auto 100%;
     background-repeat: repeat-x;
-    /*filter: hue-rotate(0deg) saturate(.5);*/ 
+    /*filter: hue-rotate(0deg) saturate(.5);*/
   }
 
   .navbar-sidebar {
@@ -38,14 +78,13 @@
     .navbar-sidebar__brand {
       background: rgba(255, 179, 212, 0.6);
       backdrop-filter: blur(25px);
-      background-image: url('assets/trianglesNavbar.png');
+      background-image: url("assets/trianglesNavbar.png");
       background-position: bottom;
       background-size: auto 100%;
-      background-repeat: repeat-x;  
+      background-repeat: repeat-x;
     }
   }
 }
-
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
@@ -58,12 +97,11 @@
   --ifm-color-primary-lightest: #ffd1e6;
   --ifm-font-family-base: "Torus", "HarmonyOS", sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  
 
   .navbar {
     background: rgba(83, 44, 62, 0.6);
     backdrop-filter: blur(25px);
-    background-image: url('assets/trianglesNavbar.png');
+    background-image: url("assets/trianglesNavbar.png");
     background-position: bottom;
     background-size: auto 100%;
     background-repeat: repeat-x;
@@ -75,14 +113,13 @@
     .navbar-sidebar__brand {
       background: rgba(255, 179, 212, 0.6);
       backdrop-filter: blur(25px);
-      background-image: url('assets/trianglesNavbar.png');
+      background-image: url("assets/trianglesNavbar.png");
       background-position: bottom;
       background-size: auto 100%;
-      background-repeat: repeat-x;  
+      background-repeat: repeat-x;
     }
   }
 }
-
 
 @font-face {
   font-family: "Torus";
@@ -131,3 +168,17 @@
     U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
 }
 
+.announcement-link,
+.navbar__link {
+  margin: auto 0.5rem auto;
+  border-radius: 0.5rem;
+  padding: 4px 6px;
+  animation: hueback 0.25s ease forwards, shrink 0.25s ease forwards;
+}
+
+.announcement-link:hover,
+.navbar__link--active,
+.navbar__link:hover {
+  color: var(--link-accent);
+  animation: hue 0.25s ease forwards, enlarge 0.25s ease forwards;
+}
