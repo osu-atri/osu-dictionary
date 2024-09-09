@@ -68,28 +68,28 @@ const config = {
     ({
       algolia: {
         // The application ID provided by Algolia
-        appId: 'E7I49QQPLB',
-  
+        appId: "E7I49QQPLB",
+
         // Public API key: it is safe to commit it
-        apiKey: '8fe508be7b99bdde81af89a9d31d4592',
-  
-        indexName: 'osu-atriio',
-  
+        apiKey: "8fe508be7b99bdde81af89a9d31d4592",
+
+        indexName: "osu-atriio",
+
         // Optional: see doc section below
         contextualSearch: true,
-  
+
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'external\\.com|domain\\.com',
-    
+        externalUrlRegex: "external\\.com|domain\\.com",
+
         // Optional: Algolia search parameters
         searchParameters: {},
-  
+
         // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
-  
+        searchPagePath: "search",
+
         // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
         insights: false,
-  
+
         //... other Algolia params
       },
       docs: {
@@ -115,7 +115,11 @@ const config = {
           },
           { to: "/docs/termtable", label: "术语表", position: "left" },
           // Must specify "index" since we use README.md
-          { to: "/docs/lazer/index", label: "osu!lazer 指南", position: "left" },
+          {
+            to: "/docs/lazer/index",
+            label: "osu!lazer 指南",
+            position: "left",
+          },
           { to: "/blog", label: "新闻", position: "left" },
           {
             href: common.src,
@@ -177,6 +181,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ["csharp", "bash"],
       },
     }),
 };
