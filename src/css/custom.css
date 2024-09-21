@@ -84,6 +84,14 @@
       background-repeat: repeat-x;
     }
   }
+
+  img.auto-invert {
+    filter: none;
+  }
+
+  img.auto-invert-reversed {
+    filter: invert(100%);
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -123,6 +131,14 @@
   .hero__title,
   .hero__subtitle {
     color: white;
+  }
+
+  img.auto-invert {
+    filter: invert(100%);
+  }
+
+  img.auto-invert-reversed {
+    filter: none;
   }
 }
 
