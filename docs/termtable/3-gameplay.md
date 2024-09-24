@@ -34,9 +34,11 @@ sidebar_position: 4
 
 | 英文 | 中文 | 备注 |
 | :-- | :-- | :-- |
+| Seeding | 选种 |  |
 | Badge weighted seeding (**BWS**) | 奖牌加权选种 |  |
 | Acronym | 缩写 | 通常指将队伍的全名缩写为三个英文字符，便于部分资源管理[^image-names]与其他情况使用 |
-| Drawings | 抽签 |  |
+| Drawings | 抽签 | 即随机将队伍分组 |
+| Mappool | 图池 | 赛事过程中可选谱面的集合（池） |
 
 ### 流程 {#routine}
 
