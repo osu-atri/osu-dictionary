@@ -9,6 +9,7 @@ sidebar_position: 3
 | 英文 | 中文 | 备注 |
 | :-- | :-- | :-- |
 | Beatmap (Map) | 谱面 | 曾译作*地图* |
+| Beatmap Set (Mapset) | 谱面集 | 也可称作*图集* |
 | Mapper | 谱师，制图者 | 制作谱面的人，非正式语境下常音译为*麻婆* |
 | Difficulty (Diff) | 难度 |  |
 | Beatmap project | 谱面项目，作图项目 |  |
