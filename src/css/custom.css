@@ -14,6 +14,7 @@
   --ifm-color-primary-lighter: #ff72b1;
   --ifm-color-primary-lightest: #ffa2cc;
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: "Torus", "HarmonyOS", sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   h1 {
     font-size: 2rem;
@@ -55,6 +56,7 @@
   --ifm-color-primary-light: #ff8abe;
   --ifm-color-primary-lighter: #ff9cc8;
   --ifm-color-primary-lightest: #ffd1e6;
+  --ifm-font-family-base: "Torus", "HarmonyOS", sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   
 
@@ -80,3 +82,52 @@
     }
   }
 }
+
+
+@font-face {
+  font-family: "Torus";
+  src: url("/fonts/Torus-Bold.otf");
+  font-weight: 800;
+  font-stretch: 75% 125%;
+  unicode-range: U+0000-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+  font-family: "Torus";
+  src: url("/fonts/Torus-Regular.otf");
+  font-weight: 400;
+  font-stretch: 75% 125%;
+  unicode-range: U+0000-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+  font-family: "Torus";
+  src: url("/fonts/Torus-SemiBold.otf");
+  font-weight: 700;
+  font-stretch: 75% 125%;
+  unicode-range: U+0000-00FF, U+0100-017F, U+0180-024F;
+}
+
+@font-face {
+  font-family: "HarmonyOS";
+  src: url("/fonts/HarmonyOS Sans/HarmonyOS_Sans_SC_Regular.ttf");
+  font-weight: 400;
+  unicode-range: U+2000-209F, U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+FF00-FFEF,
+    U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
+}
+@font-face {
+  font-family: "HarmonyOS";
+  src: url("/fonts/HarmonyOS Sans/HarmonyOS_Sans_SC_Bold.ttf");
+  font-weight: 700;
+  unicode-range: U+2000-209F, U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+FF00-FFEF,
+    U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
+}
+
+@font-face {
+  font-family: "HarmonyOS";
+  src: url("/fonts/HarmonyOS Sans/HarmonyOS_Sans_SC_Medium.ttf");
+  font-weight: 500;
+  unicode-range: U+2000-209F, U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+FF00-FFEF,
+    U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
+}
+
