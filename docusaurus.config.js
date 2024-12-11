@@ -118,14 +118,21 @@ const config = {
             position: "left",
             label: "文档",
           },
-          { to: "/docs/termtable", label: "术语表", position: "left" },
-          // Must specify "index" since we use README.md
           {
-            to: "/docs/lazer/index",
+            to: "/docs/termtable",
+            label: "术语表",
+            position: "left"
+          },
+          {
+            to: "/docs/lazer",
             label: "osu!lazer 指南",
             position: "left",
           },
-          { to: "/blog", label: "新闻", position: "left" },
+          {
+            to: "/blog",
+            label: "新闻",
+            position: "left"
+          },
           {
             href: common.src,
             label: "GitHub",

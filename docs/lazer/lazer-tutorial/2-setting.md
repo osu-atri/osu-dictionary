@@ -244,7 +244,7 @@ import borderfull from './img/border-full.jpg';
 
   ![回放控制面板](img/replay-setting.png)
 
-  可以使用`Ctrl + H`快捷键在播放回放界面快速更改此设置。  
+  可以使用`Ctrl + H`快捷键在播放回放界面快速更改此设置。
 
 ## 游戏模式
 
@@ -253,7 +253,7 @@ import borderfull from './img/border-full.jpg';
 
 :::info
 
-你可以在[**这里**](/docs/lazer/ruleset-man.md)阅读更多有关Ruleset的内容
+你可以在[**这里**](/docs/lazer/tips/ruleset-man.md)阅读更多有关Ruleset的内容
 
 :::
 
@@ -347,7 +347,7 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
   - **“多线程”** 使得Lazer将不同的任务规划在不同的线程上运行。
 
   ![多线程帧率](img/fps-multit.png)
-  
+
 :::info 请使用多线程！
 
 **推荐各位打开多线程！**多线程会单独处理你的判定。即使您的Lazer运行在帧数极低，甚至卡帧，也能为你带来最精准的判定。如果您觉得多线程的判定手感奇怪，随时可以在该设置中修改Lazer的运行方式。

@@ -1,10 +1,9 @@
 ---
+sidebarPosition: 0
 enableComments: true
 ---
 
-# 从零（存疑）开始的 osu!lazer 开发指南
-
-## 引言
+# 从零开始の开发引言
 
 <Highlight color="#ff4296">osu! 的世界时常风起云涌。</Highlight>
 

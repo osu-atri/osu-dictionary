@@ -1,11 +1,10 @@
 ---
-slug: index
 sidebar_position: 4
 enableComments: true
 displayed_sidebar: lazerSidebar
 ---
 
-# osu!lazer 指南
+# osu!lazer 指南主页
 
 欢迎来到 **osu!lazer 指南**！这是主项目 osu!dictionary 的一部分。
 

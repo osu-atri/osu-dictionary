@@ -18,7 +18,7 @@ osu!lazer 将工具栏分为左右两部分，将依次进行介绍：
 - ![主页按钮](img/home.png)：点击后可以回到主菜单。你也可以使用 `Alt + Home`回到主菜单。
 - ![游戏模式选择](img/modes.png)：展示了目前Lazer中可用的游戏模式。
   - 默认的四个内置游戏模式：osu!、osu!taiko、osu!catch 和 osu!mania排列在左侧；右侧出现的其他图标代指已经安装的其他Ruleset。
-  - 有关更多安装Ruleset的内容可以在[**这里**](/docs/lazer/ruleset-man.md)获取详细信息。
+  - 有关更多安装Ruleset的内容可以在[**这里**](/docs/lazer/tips/ruleset-man.md)获取详细信息。
 
 :::tip 小提示
 
