@@ -1,6 +1,5 @@
 ---
-authors:
-  - name: "0x84f"
+authors: hex84f
 tags: [Lazer updates, 更新日志]
 date: 2024-07-18T18:00
 slug: lazer-update-20240718

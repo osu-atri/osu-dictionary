@@ -1,7 +1,5 @@
 ---
-authors:
-  - name: Hivie
-  - name: Walavouchey
+authors: [hivie, wala]
 tags: [news, fanart, contest, 比赛, 社区]
 image: https://assets.ppy.sh/contests/205/banners/Tofumang.jpg
 date: 2024-03-30T03:00

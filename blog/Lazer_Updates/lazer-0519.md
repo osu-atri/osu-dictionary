@@ -1,7 +1,5 @@
 ---
-authors:
-  - name: Walavouchey
-  - name: "0x84f"
+authors: [wala, hex84f]
 tags: [Lazer updates, 更新日志]
 date: 2024-05-19T20:43
 slug: lazer-update-20240519

@@ -1,6 +1,5 @@
 ---
-authors:
-  - name: "0x84f"
+authors: hex84f
 tags: [技术, technology, 历史, history]
 date: 2023-12-22T12:00
 slug: tech-history
