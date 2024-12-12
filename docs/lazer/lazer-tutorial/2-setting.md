@@ -2,13 +2,25 @@
 enableComments: true
 ---
 
-import slidersneakin from './img/slider-sneakin.gif';
-import slidernosneakin from './img/slider-nosneakin.gif';
-import slidersneakout from './img/slider-sneakout.gif';
-import slidernosneakout from './img/slider-nosneakout.gif';
-import bordernone from './img/border-none.jpg';
-import bordercorner from './img/border-corner.jpg';
-import borderfull from './img/border-full.jpg';
+import songselectBlur from './img/songselect-blur.png';
+import songselectClear from './img/songselect-clear.png';
+import sliderSneakIn from './img/slider-sneakin.gif';
+import sliderNoSneakIn from './img/slider-nosneakin.gif';
+import sliderSneakOut from './img/slider-sneakout.gif';
+import sliderNoSneakOut from './img/slider-nosneakout.gif';
+import borderNone from './img/border-none.jpg';
+import borderCorner from './img/border-corner.jpg';
+import borderFull from './img/border-full.jpg';
+import rankingWithFlag from './img/ranking-flag.png';
+import rankingNoFlag from './img/ranking-noflag.png';
+import fpsSingleThread from './img/fps-singlet.png';
+import fpsMultiThread from './img/fps-multit.png';
+import mapInfoZH from './img/mapcard-zh.png';
+import mapInfoJP from './img/mapcard-jp.png';
+import mapInfoOriginalZH from './img/mapcard-zh-org.png';
+import mapInfoOriginalJP from './img/mapcard-jp-org.png';
+import time12 from './img/time-12.png';
+import time24 from './img/time-24.png';
 
 # Part 2: 游戏设置
 
@@ -51,9 +63,16 @@ import borderfull from './img/border-full.jpg';
 - 点击 **“进一步了解lazer”** 会跳转到 osu! wiki 中的“[升级到 lazer](https://osu.ppy.sh/wiki/zh/Help_centre/Upgrading_to_lazer)”页面。
 - 打开 **“使用原语言展示谱面信息”** 会在选歌页面使用歌曲的原语言展示歌曲信息。
 
-  ![中文谱面罗马表示](img/mapcard-zh.png) →![中文谱面原文表示](img/mapcard-zh-org.png)
-
-  ![日文谱面罗马表示](img/mapcard-jp.png) →![日文谱面原文表示](img/mapcard-jp-org.png)
+<table>
+  <tr>
+    <td><img src={mapInfoZH} alt="中文谱面罗马表示" /><br />中文谱面罗马表示</td>
+    <td><img src={mapInfoOriginalZH} alt="中文谱面原文表示" /><br />中文谱面原文表示</td>
+  </tr>
+  <tr>
+    <td><img src={mapInfoJP} alt="日文谱面罗马表示" /><br />日文谱面罗马表示</td>
+    <td><img src={mapInfoOriginalJP} alt="日文谱面原文表示" /><br />日文谱面原文表示</td>
+  </tr>
+</table>
 
 :::info 双修玩家请注意！
 
@@ -71,7 +90,13 @@ import borderfull from './img/border-full.jpg';
 
 - **“使用24小时制时间”** 会在右上角的时间显示部分使用24小时制展示当前时间。
 
-  ![12 小时制](img/time-12.png)→![24 小时制](img/time-24.png)
+<table>
+  <tr>
+    <td><img src={time12} alt="中文谱面罗马表示" /><br />12 小时制</td>
+    <td><img src={time24} alt="中文谱面原文表示" /><br />24 小时制</td>
+  </tr>
+</table>
+
 - **“检查更新”** 顾名思义。
 - **“打开osu!文件夹”** 会使用系统文件管理器打开Lazer的安装文件夹。
 - **“导出日志”** 会将日志导出到Lazer安装目录下 `exports` 文件夹内。导出的日志以压缩包 `compressed-logs.zip` 的样式呈现。
@@ -172,8 +197,8 @@ import borderfull from './img/border-full.jpg';
 - **“菜单提示”** 决定主页底部是否显示小提示，与 stable 中的提示一个性质。
 
   ![菜单提示展示](img/menutip.png)
-- **“osu!主题音乐”** 决定Lazer在启动时是否播放主题音乐。
-- Lazer提供了三种不同的启动动画。使用下拉菜单来选择你喜欢的启动动画，或者使用“Random”随机选择启动动画。
+- **“osu!主题音乐”** 决定Lazer在启动时是否播放主题音乐。如果不启用，启动时则会先播放stable的钢琴启动声，然后淡出随机切到一首歌曲。
+- Lazer提供了三种不同的启动动画。使用下拉菜单来选择你喜欢的启动动画，或者使用“Random”在启动时随机播放启动动画。
 
   ![启动动画设置](img/intro-setting.png)
 - **“背景图片来源”** 决定主菜单背景显示的内容。你可能需要osu! 支持者来启用该功能。
@@ -192,7 +217,12 @@ import borderfull from './img/border-full.jpg';
 - **“在选择模组时自动聚焦搜索框”** 允许你更方便地搜索模组。启用后点击mod菜单，可以直接输入你想检索的模组。
 - **“背景模糊”** 决定选歌界面的背景曲绘是否做模糊处理。
 
-  ![启用模糊](img/songselect-vague.png "启用模糊")![禁用模糊](img/songselect-clear.png "禁用模糊")
+<table>
+  <tr>
+    <td><img src={songselectBlur} alt="启用模糊" />启用模糊</td>
+    <td><img src={songselectClear} alt="禁用模糊" />禁用模糊</td>
+  </tr>
+</table>
 
 ## 游戏
 
@@ -240,20 +270,19 @@ import borderfull from './img/border-full.jpg';
 
 :::
 
-- **“显示回放设置界面”** 决定在观看回放时，右上角是否显示回放操作面板。
+- **“显示回放设置界面”** 启用后，在观看回放显示 HUD 时，光标移到屏幕右侧会弹出回放控制面板。
 
   ![回放控制面板](img/replay-setting.png)
 
-  可以使用`Ctrl + H`快捷键在播放回放界面快速更改此设置。
+  可以使用 `Ctrl + H` 快捷键在播放回放界面快速更改此设置。
 
 ## 游戏模式
 
 游戏模式设置组可以调整不同游戏模式下Lazer的表现。如果你安装了自定义模式 (Ruleset)，那么对应的设置也会出现在这里。
 
-
 :::info
 
-你可以在[**这里**](/docs/lazer/tips/ruleset-man.md)阅读更多有关Ruleset的内容
+你可以在[**这里**](/docs/lazer/tips/ruleset-man.md)阅读更多有关Ruleset的内容。
 
 :::
 
@@ -266,30 +295,29 @@ import borderfull from './img/border-full.jpg';
 - **“渐入滑条”** 决定是否启用滑条平滑进入动画。
 - **“渐出滑条”** 决定是否启用滑条平滑结束动画。
 
-
-<table>
+  <table>
     <tr>
-        <td><img src={slidersneakin} />渐入滑条 开</td>
-        <td><img src={slidernosneakin} />渐入滑条 关</td>
+      <td><img src={sliderSneakIn} alt="渐入滑条动图"/>渐入滑条·开</td>
+      <td><img src={sliderNoSneakIn} alt="不渐入滑条动图" />渐入滑条·关</td>
     </tr>
     <tr>
-        <td><img src={slidersneakout} />渐出滑条 开</td>
-        <td><img src={slidernosneakout} />渐出滑条 关</td>
+      <td><img src={sliderSneakOut} alt="渐出滑条动图" />渐出滑条·开</td>
+      <td><img src={sliderNoSneakOut} alt="不渐出滑条动图" />渐出滑条·关</td>
     </tr>
-</table>
+  </table>
 
   如果你喜欢stable的滑条显示逻辑，则可将“渐出滑条”关闭。
 - **“游戏区域边框样式”** 决定是否在游玩过程中显示区域边框。
 
   ![边框设置](img/border-setting.png)
 
-<table>
+  <table>
     <tr>
-        <td><img src={bordernone} />不显示</td>
-        <td><img src={bordercorner} />仅显示边框角</td>
-        <td><img src={borderfull} />全边框</td>
+      <td><img src={borderNone} alt="无边框效果图" />不显示</td>
+      <td><img src={borderCorner} alt="边框角效果图" />仅显示边框角</td>
+      <td><img src={borderFull} alt="全边框效果图" />全边框</td>
     </tr>
-</table>
+  </table>
 
   在“全边框”和“仅显示边框角”两个选项之间切换甚至可以欣赏到丝滑的动画。
 
@@ -315,7 +343,10 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
 
 ![视频、截图等设置](img/video-list.png)
 
-- **“显示模式”** 下拉菜单提供三种显示模式。“Windowed”窗口模式，“Fullscreen”全屏模式和“Borderless”无边框窗口模式。
+- **“显示模式”** 下拉菜单提供三种显示模式：
+  - Windowed - 窗口模式
+  - Fullscreen - 全屏模式
+  - Borderless - 无边框窗口模式
 
 :::tip 建议
 
@@ -342,15 +373,18 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
   ![帧数设置](img/frate-setting.png)
 - **“线程模式”** 决定Lazer运行的线程模式。
   - **“单线程”** 使得Lazer将所有任务严格限制在一个线程上运行。
-
-  ![单线程帧率](img/fps-singlet.png)
   - **“多线程”** 使得Lazer将不同的任务规划在不同的线程上运行。
 
-  ![多线程帧率](img/fps-multit.png)
+  <table>
+    <tr>
+      <td><img src={fpsSingleThread} alt="单线程帧率显示" /><br />单线程帧率</td>
+      <td><img src={fpsMultiThread} alt="多线程帧率显示" /><br />多线程帧率</td>
+    </tr>
+  </table>
 
 :::info 请使用多线程！
 
-**推荐各位打开多线程！**多线程会单独处理你的判定。即使您的Lazer运行在帧数极低，甚至卡帧，也能为你带来最精准的判定。如果您觉得多线程的判定手感奇怪，随时可以在该设置中修改Lazer的运行方式。
+**推荐各位打开多线程！** 多线程会单独处理你的判定。即使您的Lazer运行在帧数极低，甚至卡帧，也能为你带来最精准的判定。如果您觉得多线程的判定手感奇怪，随时可以在该设置中修改Lazer的运行方式。
 
 想了解更多有关于Lazer中帧数和延迟的关系，可以在文章中的本节<!-- TODO -->（待补充）找到更多信息。
 
@@ -369,17 +403,28 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
 ![在线设置列表](img/online-list.png)
 
 - **“打开外部链接时弹出警告”** 会在游戏中尝试打开外部链接时弹出确认弹窗。
-  - 该选项不会对 `osu.ppy.sh` 域名下的链接打开请求作出限制（`osu.ppy.sh/news` 除外）。
+  - 该选项不会对 `osu.ppy.sh` 域名下的链接打开请求作出限制。
   ![外链警告](img/extlink-warning.png)
-- **“自动下载所需的谱面”** 会在准备旁观他人游戏时或其他时机，自动通过osu!Direct下载所需的谱面。
+- **“自动下载所需的谱面”** 会在准备旁观他人游戏时或其他时机，自动通过游戏内部功能下载谱面。
   - 由于Lazer中，osu!Direct功能已经开放给所有玩家使用，此选项所有人可以选择开启。
-- **“隐藏国家或地区旗”** 会隐藏界面上的所有国旗，非常适合在直播时防止被超管（尤其是国内直播平台）当场拿下直播间。
+- **“隐藏国家或地区旗”** 会将界面上的所有国旗改为问号旗，对于避免内容审查（如超管抽查直播间）非常有用。
 
-  ![禁用该选项](img/ranking-noflag.png "禁用该选项")![启用该选项](img/ranking-flag.png "启用该选项")
+<table>
+  <tr>
+    <td><img src={rankingWithFlag} alt="正常旗子效果图" />显示国家或地区旗</td>
+    <td><img src={rankingNoFlag} alt="问号旗效果图" />隐藏国家或地区旗</td>
+  </tr>
+</table>
 
 ## 维护
 
-维护设置组提供了不少便利的选项，这里按钮上功能已经写得很明白了所以不多赘述。
+维护设置组中，值得一提的是 **“运行延迟验证器”**。点击之后会打开新窗口，帧数限制会自动调整至无限制。你可以通过“做题”的方式，来判断不同的刷新率对Lazer中延迟的影响。更多的技术性内容可以在[这里](https://github.com/ppy/osu/wiki/Latency-and-unlimited-frame-rates#latency-certifier-mini-game)找到。
+
+做题的规则是：总是选择你感觉**更丝滑**的那一边。
+
+![验证器界面](img/latency-certifier.png)
+
+除此之外，维护设置组提供了不少便利的选项，这里按钮上功能已经写得很明白了所以不多赘述。
 
 ![维护设置列表](img/maintenance-list.png)
 
@@ -393,16 +438,10 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
 
 :::
 
-## 调试
+:::note 提示
 
-调试部分提供了大部分玩家平常使用不到的功能。
+在最近的版本中，开发团队删除了一些调试相关的按钮。
 
-![调试设置列表](img/debug-list.png)
+这些按钮的行为多与 lazer 的存储机制有关，这个我们之后再细讲。
 
-- **“运行延迟验证器”** 选项会打开新窗口，帧数限制会自动调整至无限制。你可以通过“做题”的方式来判断在不同的刷新率下，在Lazer中的延迟实际上没有任何影响。更多的技术性内容可以在[这里](https://github.com/ppy/osu/wiki/Latency-and-unlimited-frame-rates#latency-certifier-mini-game)找到。
-  - 做题的规则是：总是选择你感觉更丝滑的那一边。
-
-  ![验证器界面](img/latency-certifier.png)
-- "Block realm", "Unblock realm"和"Compact realm"与Lazer的数据库处理相关。作为普通玩家一般不需要管这些设置。
-
-了解更多有关于Lazer存储结构的知识，可以在本节<!-- TODO -->（待补充）中找到更多信息。
+:::
