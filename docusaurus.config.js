@@ -28,6 +28,10 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
+  future: {
+    experimental_faster: true,
+  },
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -121,7 +125,7 @@ const config = {
           {
             to: "/docs/termtable",
             label: "术语表",
-            position: "left"
+            position: "left",
           },
           {
             to: "/docs/lazer",
@@ -131,7 +135,7 @@ const config = {
           {
             to: "/blog",
             label: "新闻",
-            position: "left"
+            position: "left",
           },
           {
             href: common.src,
