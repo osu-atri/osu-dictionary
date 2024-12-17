@@ -1,0 +1,90 @@
+@keyframes press {
+  to {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes unpress {
+  from {
+    scale: 1.05;
+  }
+  to {
+    scale: 1.0;
+  }
+}
+
+@keyframes slightExpand {
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes flash {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: var(--hue-color);
+  }
+}
+
+@keyframes hue {
+  to {
+    background-color: var(--hue-color);
+  }
+}
+
+@keyframes hueBack {
+  to {
+    background-color: var(--src-color);
+  }
+}
+
+.backgroundPrimary {
+  background-color: hsl(255, 60%, 50%);
+  --src-color: hsl(255, 60%, 50%);
+  --hue-color: hsl(255, 69%, 66%);
+}
+
+.backgroundWarn {
+  background-color: hsl(43, 100%, 47%);
+  --src-color: hsl(43, 100%, 47%);
+  --hue-color: hsl(43, 100%, 57%);
+}
+
+.backgroundDanger {
+  background-color: hsl(333, 60%, 50%);
+  --src-color: hsl(333, 60%, 50%);
+  --hue-color: hsl(333, 60%, 60%);
+}
+
+.settingButton {
+  border-radius: 2rem;
+  font-family: Torus;
+  font-weight: 600;
+  min-width: 30%;
+  color: white;
+  padding: 1rem;
+  border: none;
+  animation: unpress 0.5s ease forwards;
+}
+
+.settingButton:disabled {
+  opacity: 0.6;
+}
+
+.settingButton:active {
+  animation: flash 1s ease forwards;
+}
+
+.settingButton:focus {
+  animation: hue 0.5s ease-out forwards;
+}
+
+.settingButton:hover {
+  animation: hue 0.5s ease-out forwards, slightExpand 0.5s ease-out forwards;
+}
+
+.settingButton:before {
+  animation: hueBack 0.75s ease forwards;
+}
