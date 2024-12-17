@@ -36,11 +36,11 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 
 打开设置页后，你可以直接输入你想搜索的设置条目。
 
-点击 <FontAwesomeIcon icon={faArrowRotateLeft} style={{color: "#B299FF"}} /> 按钮可以恢复该设置默认值。
+点击每个设置项左侧的 <FontAwesomeIcon icon={faArrowRotateLeft} style={{color: "#B299FF"}} /> 按钮可以恢复该设置默认值。
 
 :::warning 注意
 
-不同平台的设置显示的条目和选项可能不同。以下设置以 Windows 端为例，版本 `2024.625.2`。
+不同平台与版本的设置页面显示的条目和选项可能不同。以下设置以 Windows 端为例，版本 `2024.1208.0`。
 
 :::
 
@@ -55,9 +55,9 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 
 :::
 
-## 常规
+## <OsuIcon icon="settings" label="常规" scale="0.03" invert="true" reverse="true" /> 常规
 
-常规设置组包含了最基本的Lazer设置。
+常规设置组包含了最基本的设置。
 
 ![常规设置列表](img/general-list.png)
 
@@ -116,7 +116,7 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 
 :::
 
-## 皮肤
+## <OsuIcon icon="skin-b" label="皮肤" scale="0.03" invert="true" reverse="true" /> 皮肤
 
 皮肤设置组包含了对皮肤的各种操作。
 
@@ -134,7 +134,7 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 - **“导出当前皮肤”** 按钮会将当前选中的皮肤导出至.osk文件。同样，皮肤文件会导出到Lazer目录下`exports`文件夹内。
 - **“删除当前的皮肤”** 就是删除当前的皮肤，没啥好说的。
 
-## 输入
+## <OsuIcon icon="input" label="输入" scale="0.03" invert="true" reverse="true" /> 输入
 
 输入设置组决定了Lazer处理你输入的方式。
 
@@ -183,7 +183,7 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 - **“在游戏中禁用鼠标滚轮调整音量”** 顾名思义。注意，如果此选项被禁用，你仍然可以使用 `Alt+滚轮`调整音量。
 - **“在游戏中禁用鼠标点击”** 同理。
 
-## 用户界面
+## <OsuIcon icon="user-interface" label="用户界面" scale="0.03" invert="true" reverse="true" /> 用户界面
 
 用户界面设置组决定了Lazer的外观。
 
@@ -226,7 +226,7 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
   </tr>
 </table>
 
-## 游戏
+## <OsuIcon icon="gameplay-c" label="游戏" scale="0.03" invert="true" reverse="true" /> 游戏
 
 游戏设置组决定Lazer在游戏过程中的行为表现。
 
@@ -278,7 +278,7 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 
   可以使用 `Ctrl + H` 快捷键在播放回放界面快速更改此设置。
 
-## 游戏模式
+## <OsuIcon icon="rulesets" label="游戏模式" scale="0.03" invert="true" reverse="true" /> 游戏模式
 
 游戏模式设置组可以调整不同游戏模式下Lazer的表现。如果你安装了自定义模式 (Ruleset)，那么对应的设置也会出现在这里。
 
@@ -323,7 +323,7 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 
   在“全边框”和“仅显示边框角”两个选项之间切换甚至可以欣赏到丝滑的动画。
 
-## 音频
+## <OsuIcon icon="audio" label="音频" scale="0.03" invert="true" reverse="true" /> 音频
 
 音频设置组控制Lazer的音频输出和全局偏移调整。
 
@@ -337,7 +337,7 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
 
 如果你觉得大部分的谱面打起来还算舒服，而个别的谱面打起来比较奇怪，推荐不要调整全局偏移，而是调整单个谱面的偏移。
 
-## 图像
+## <OsuIcon icon="graphics" label="图像" scale="0.03" invert="true" reverse="true" /> 图像
 
 图像设置组控制Lazer如何输出渲染图像。本节设置比较影响性能表现。
 
@@ -398,7 +398,7 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
 
 像上两个图片一样，鼠标悬停在上方会显示各个线程的每秒帧率和延迟。
 
-## 在线
+## <OsuIcon icon="online" label="在线" scale="0.03" invert="true" reverse="true" /> 在线
 
 在线设置组决定Lazer如何共享或使用在线资源。
 
@@ -418,7 +418,7 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
   </tr>
 </table>
 
-## 维护
+## <OsuIcon icon="maintenance" label="维护" scale="0.03" invert="true" reverse="true" /> 维护
 
 维护设置组中，值得一提的是 **“运行延迟验证器”**。点击之后会打开新窗口，帧数限制会自动调整至无限制。你可以通过“做题”的方式，来判断不同的刷新率对Lazer中延迟的影响。更多的技术性内容可以在[这里](https://github.com/ppy/osu/wiki/Latency-and-unlimited-frame-rates#latency-certifier-mini-game)找到。
 
