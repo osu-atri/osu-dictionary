@@ -22,19 +22,21 @@ import mapInfoOriginalJP from './img/mapcard-jp-org.png';
 import time12 from './img/time-12.png';
 import time24 from './img/time-24.png';
 
+import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
+
 # Part 2: 游戏设置
 
 在开始游戏前，推荐您先调整好你自己喜欢的游戏习惯。可以使用以下方式，打开设置面板：
 
-- 点击 osu! 粉饼后，点击左侧的![设置按钮](img/settings.png)（灰色）进入设置页面
-- 点击左上角的![设置按钮](img/settings.png)也可以进入设置。
+- 点击 osu! 粉饼后，点击左侧的 <OsuIcon icon="settings" label="设置按钮" scale="0.025" invert="true" reverse="true" /> 进入设置页面。
+- 点击左上角的 <OsuIcon icon="settings" label="设置按钮" scale="0.025" invert="true" reverse="true" /> 也可以进入设置。
 - 在游戏过程中的任何时候，您都可以使用快捷键 `Ctrl + O` 进入设置菜单。
 
 ![设置面板](img/setting-panel.png)
 
 打开设置页后，你可以直接输入你想搜索的设置条目。
 
-点击![复位](img/reset.png)按钮可以恢复该设置默认值。
+点击 <FontAwesomeIcon icon={faArrowRotateLeft} style={{color: "#B299FF"}} /> 按钮可以恢复该设置默认值。
 
 :::warning 注意
 

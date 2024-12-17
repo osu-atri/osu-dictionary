@@ -4,6 +4,8 @@ enableComments: true
 
 # Part 3: 界面介绍及使用
 
+import { faXmark, faPlus } from "@fortawesome/free-solid-svg-icons";
+
 ## 工具栏
 
 工具栏坐落在屏幕的最上方，呈长条形横跨整个显示界面。
@@ -14,8 +16,8 @@ osu!lazer 将工具栏分为左右两部分，将依次进行介绍：
 
 ### 左栏
 
-- ![设置按钮](img/settings.png)：点击后可打开游戏设置面板，也可以使用 `Ctrl + O`。
-- ![主页按钮](img/home.png)：点击后可以回到主菜单。你也可以使用 `Alt + Home`回到主菜单。
+- <OsuIcon icon="settings" label="设置按钮" scale="0.025" invert="true" reverse="true" />：点击后可打开游戏设置面板，也可以使用 `Ctrl + O`。
+- <OsuIcon icon="home" label="主页按钮" scale="0.025" invert="true" reverse="true" />：点击后可以回到主菜单。你也可以使用 `Alt + Home`回到主菜单。
 - ![游戏模式选择](img/modes.png)：展示了目前Lazer中可用的游戏模式。
   - 默认的四个内置游戏模式：osu!、osu!taiko、osu!catch 和 osu!mania排列在左侧；右侧出现的其他图标代指已经安装的其他Ruleset。
   - 有关更多安装Ruleset的内容可以在[**这里**](/docs/lazer/tips/ruleset-man.md)获取详细信息。
@@ -32,14 +34,14 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 | 图标 | 功能 | 备注 |
 | :-: | :-: | :-: |
-| ![新闻](img/news.png) | 新闻 | 看看 osu! 社区最近发生了什么 |
-| ![更新日志](img/changelog-b.png) | 更新日志 | osu! 最近的更新变化 |
-| ![osu!wiki](img/wiki.png) | osu!wiki | 社区的共享知识库 |
-| ![排名](img/ranking.png) | 排行榜 | 看看现在谁最强 |
-| ![谱面列表](img/beatmap.png) | 谱面列表 | 也可以按下 `Ctrl + B` |
-| ![聊天](img/chat.png) | 聊天面板 | 也可以按下 `F8` |
-| ![主页](img/global.png) | 个人资料 | 显示你所有的好友，或者在这里搜索在线的任何用户 |
-| ![正在播放](img/music.png) | 正在播放 | 查看并控制正在播放的歌曲 |
+| <OsuIcon icon="news" label="新闻" scale="0.25" invert="true" reverse="1" /> | 新闻 | 看看 osu! 社区最近发生了什么 |
+| <OsuIcon icon="changelog-b" label="更新日志" scale="0.25" invert="true" reverse="1" /> | 更新日志 | osu! 最近的更新变化 |
+| <OsuIcon icon="wiki" label="osu!wiki" scale="0.25" invert="true" reverse="1" /> | osu!wiki | 社区的共享知识库 |
+| <OsuIcon icon="ranking" label="排名" scale="0.25" invert="true" reverse="1" /> | 排行榜 | 看看现在谁最强 |
+| <OsuIcon icon="beatmap" label="谱面列表" scale="0.25" invert="true" reverse="1" /> | 谱面列表 | 也可以按下 `Ctrl + B` |
+| <OsuIcon icon="chat" label="聊天面板" scale="0.25" invert="true" reverse="1" /> | 聊天面板 | 也可以按下 `F8` |
+| <OsuIcon icon="global" label="个人资料" scale="0.25" invert="true" reverse="1" /> | 个人资料 | 显示你所有的好友，或者在这里搜索在线的任何用户 |
+| <OsuIcon icon="music" label="正在播放" scale="0.25" invert="true" reverse="1" /> | 正在播放 | 查看并控制正在播放的歌曲 |
 
 其中，“正在播放”的展开样式如图：
 
@@ -49,13 +51,13 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
   - 这一部分还可以在完成单次游戏后显示排名和pp信息。就像这样：
   ![排名下降了](img/rank-down.gif)
 - ![时间栏](img/time-12.png)：显示时间信息。
-  - 下面的 “running xxxxxx”展示了Lazer一次已经运行的时长。
+  - 下面的 <FntColor color="#ff99cc">**running ##:##:##**</FntColor>展示了Lazer本次已经运行的时长。
   - 可以点击该区域切换时钟样式，一共四种：
     - ![模拟时钟](img/time-analog.png)
     - ![模拟+数字时钟+运行时间](img/time-12.png)
     - ![数字时钟+运行时间](img/time-digital-run.png)
     - ![数字时钟](img/time-digital.png)
-- ![通知栏](img/notify.png)：**通知栏**。也可以使用 `Ctrl + N` 打开通知栏。
+- <OsuIcon icon="notification" label="通知栏按钮" scale="0.025" invert="true" reverse="true" />：**通知栏**。也可以使用 `Ctrl + N` 打开通知栏。
 
 ## 通知与通知栏
 
@@ -88,7 +90,7 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 - 蓝色：任务进行中（如下载、导入）
 - 红色：任务失败
 
-对于运行中的任务，可以点击通知右侧的 `×` 图标，或者右键单击通知停止任务进程。
+对于运行中的任务，可以点击通知右侧的 <FontAwesomeIcon icon={faXmark} size="lg" /> 图标，或者右键单击通知停止任务进程。
 
 ![停止任务或删除通知](img/notify-stopndel.gif)
 
@@ -111,9 +113,9 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 ![谱面信息显示](img/songselect-left.png)
 
-转到左侧的显示区域，上方会显示谱面的基本信息，包含曲绘，难度名，歌名，作曲家，谱师等信息。
+转到左侧的显示区域，上方会显示谱面的基本信息，包含曲绘、难度名、歌名、作曲家、谱师等信息。
 
-点击 `mapped by XXX` 中的蓝字转到谱师个人主页。
+点击 **mapped by <FntColor color="#66CCFF">XXX</FntColor>** 中的蓝字可打开谱师的个人主页。
 
 :::info 提示
 
@@ -121,27 +123,39 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 :::
 
-下方的五个数字分别表示**游玩长度，BPM，圆圈总数，滑条总数**和**转盘总数。**
+下方的五个数字分别表示**游玩长度、BPM、圆圈总数、滑条总数与转盘总数。**
 
-下面显示有关当前难度的属性，包含圆圈大小，准度要求，难度星级，掉血速度和缩圈速度。
+下面显示有关当前难度的属性，包含圆圈大小、准度要求、难度星级、掉血速度与缩圈速度。
 
 下面有五个选项，每个选项包含不同的信息显示。
 
-- **"Details"：** 显示当前难度的更多谱面信息
+<Tabs groupId="beatmapInfo">
+  <TabItem value="Details">
+  显示当前难度的具体信息，例如玩家评分、标签来源、失败位置等等。
 
   ![难度详细信息](img/songselect-info.png)
-- **"Local"：** 显示当前难度的本地排行榜
+  </TabItem>
+  <TabItem value="Local">
+  显示本地所有分数的排行榜。
 
   ![本地排行榜](img/ranking-local.png)
-- **"Global"：** 显示当前难度的全球排行榜
+  </TabItem>
+  <TabItem value="Global">
+  显示当前难度的全球分数排行榜。
 
   ![全球排行榜](img/ranking-global.png)
-- **"Country"：** 显示当前难度的地区排行榜。您需要osu!Supporter来使用该功能。
+  </TabItem>
+  <TabItem value="Country">
+  显示当前难度的地区分数排行榜。你需要 osu! 支持者来使用该功能。
 
   ![地区排行榜](img/ranking-country.png)
-- **"Friend"：** 显示当前难度的好友排行榜。您需要osu!Supporter来使用该功能。
+  </TabItem>
+  <TabItem value="Friend">
+  显示当前难度的好友分数排行榜。你需要 osu! 支持者来使用该功能。
 
   ![好友排行榜](img/ranking-friend.png)
+  </TabItem>
+</Tabs>
 
 在排行榜中，点击榜单右上角![模组限制开关](img/selectmod-toggle.png)按钮来显示当前选中mod的排行榜。例如你当前选中了 Hard Rock，那么勾选后就会显示当前难度下带 Hard Rock 成绩的排行榜。你同样需要 osu! 支持者来使用该功能。
 
@@ -157,7 +171,7 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 :::
 
-点击"mods"打开mod菜单：
+点击 <Highlight color="#FFCC22">**mods**</Highlight> 打开mod菜单：
 
 ![模组选择界面](img/mods-list.png)
 
@@ -171,7 +185,7 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 #### 模组预设
 
-在最左侧你可以管理自己的模组预设。在选定mod的情况下，点击加号创建新的预设。
+在最左侧你可以管理自己的模组预设。在选定mod的情况下，点击 <FontAwesomeIcon icon={faPlus} size="lg" /> 创建新的预设。
 
 ![新建模组预设](img/modset-new.png)
 
@@ -195,11 +209,11 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 :::
 
-当按住 `Shift` 时，![随机按钮](img/random-button.png)会变成![撤销按钮](img/rewind-button.png)。
+当按住 `Shift` 时，<Highlight color="#A5CC00">**random**</Highlight> 随机按钮会变成 <Highlight color="#A5CC00">**rewind**</Highlight> 撤销按钮。
 
 ---
 
-点击![谱面设置](img/options-button.png)按钮打开谱面设置菜单。
+点击 <Highlight color="#66CCFF">**options**</Highlight> 按钮打开谱面设置菜单。
 
 ![谱面设置组](img/options-group.png)
 
@@ -213,7 +227,7 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 ### 搜索与筛选区
 
-右上角的这一部分允许您通过不同的方式查询你需要的谱面。
+你可以使用右上方的搜索区找到你想玩的谱面。
 
 ![谱面搜索与筛选区](img/beatmap-search.png)
 
@@ -250,13 +264,21 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 | `cs` | 圆圈大小 |
 | `od` | 判定严度 |
 | `hp`,`dr` | 掉血速度 |
-| `key`,`keys` | 按键数量（osu!mania） |
+| `key`,`keys` | 按键数量（仅限 osu!mania） |
 | `star`,`stars` | 星数 |
 | `bpm` | 歌曲速度 |
 | `length` | 游玩时间（单位为秒） |
-| `status` | 谱面状态；值为 `ranked`、`approved`、`pending`、`notsubmitted`、`unknown`、`loved` 其一，或者简写为 `r`/`a`/`p`/`n`/`u`/`l`。允许用英文逗号分隔的多个值 (`,`) |
-| `played`,`lastplayed` | 距上次游玩的时间。允许按 `#y#M#d#h#m#s` 格式输入（年月日时分秒）。比如，`2d5s` 表示“2天5秒”。 |
+| `status` | 谱面状态  |
+| `played`,`lastplayed` | 距上次游玩的时间 |
 | `divisor` | 音符时值的分母 |
+
+:::tip 搜索
+
+谱面状态 `status` 的值可以是 `ranked`/`approved`/`pending`/`notsubmitted`/`unknown`/`loved` 其一，或者简写为 `r`/`a`/`p`/`n`/`u`/`l`。多个值可用英文逗号 (`,`) 分隔。
+
+距上次游玩的时间可以按 `#y#M#d#h#m#s` 格式输入（年月日时分秒）。比如 `2d5s` 表示“2天5秒”。
+
+:::
 
 例如，要搜索处于已上架 (Ranked) 与社区喜爱 (Loved) 状态的谱面：`status=r,l`
 
@@ -281,7 +303,7 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 ![带有不同模式难度的谱面](img/beatmapset-card.png)
 
-在上面的例子中，osu!taiko游戏模式的难度会变暗。这是因为当前选择的游戏模式为osu!模式，并非osu!taiko模式。
+在上面的例子中，osu!taiko 游戏模式的难度图标被暗化了。这是因为当前选择的游戏模式为 osu! 模式，并非 osu!taiko 模式。
 
 :::tip 小提示
 
