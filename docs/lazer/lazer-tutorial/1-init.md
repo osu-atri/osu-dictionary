@@ -4,24 +4,24 @@ enableComments: true
 
 # Part 1: 准备工作
 
-Lazer是开源项目，你可以在GitHub上找到托管Lazer源代码的仓库：[传送门](https://github.com/ppy/osu)。
+osu!lazer 是开源项目，你可以在 GitHub 上找到托管其源代码的仓库：[传送门](https://github.com/ppy/osu)。
 
 :::info 提示
 
-您可能需要特殊的网络环境来访问GitHub。
+您可能需要特殊的网络环境来访问 GitHub。
 
 :::
 
 进入页面后，点击右下角的 **Releases** 以获取各个版本的安装包。“Latest”代指最新的稳定版本。
 
-![image.png](img/gh-repo.png)
+![GitHub 仓库页](img/gh-repo.png)
 
 ---
 
-Assets下方展示了所有可供下载的资源。作为普通玩家，主要下载这些文件即可：
+Assets 下方展示了所有可供下载的资源。作为普通玩家，主要下载这些文件即可：
 
 - `install.exe` 是 Windows 操作系统的安装程序
-- `sh.ppy.osylazer.apk` 是 Android 系统的安装包
+- `sh.ppy.osulazer.apk` 是 Android 系统的安装包
 - `osu.iOS.ipa` 用于 iOS 上 Lazer 的安装
 - `osu.app.Apple.Silicon.zip` 适用于 MacOS
 - `osu.AppImage` 用于在 Linux 系统运行
@@ -40,15 +40,15 @@ flatpak install sh.ppy.osu
 
 :::
 
-你也可以在 [osu! 官网](https://osu.ppy.sh/home/download)下载 osu!lazer。下载Lazer请点击右边的按钮，左边的按钮会下载stable。
+你也可以在 [osu! 官网](https://osu.ppy.sh/home/download)下载 osu!lazer。下载 Lazer 请点击右边的按钮，左边的按钮会下载 stable。
 
 ![osu! 官网下载页面](img/download-page.png)
 
-运行安装后稍等一会，就可以在你的电脑的某个角落找到Lazer了。
+运行安装后稍等一会，就可以在你的电脑的某个角落找到 Lazer 了。
 
 ## 首次启动设置
 
-初次启动Lazer，你首先会看到“首次启动设置”。在这里你可以快速设置好你的游戏偏好，从stable导入数据，以及获取推荐谱面。下面介绍几个比较重要的设置：
+初次启动 Lazer，你首先会看到“首次启动设置”。在这里你可以快速设置好你的游戏偏好，从 stable 导入数据，以及获取推荐谱面。下面介绍几个比较重要的设置：
 
 ### 语言设置
 
@@ -88,7 +88,7 @@ flatpak install sh.ppy.osu
 
 ### 导入
 
-对于从未接触过 osu! 的萌新来说，这一步基本可以跳过。而对于从stable转来的玩家，这一步尤为重要。
+对于从未接触过 osu! 的萌新来说，这一步基本可以跳过。而对于从 stable 转来的玩家，这一步尤为重要。
 
 ![导入向导](img/setup-import.png)
 
@@ -98,9 +98,9 @@ Lazer 会自动检测您计算机上 stable 的安装位置。如果路径错误
 
 :::warning 导入数据前...
 
-如果您的Lazer和stable<u>没有安装在同一驱动器下</u>，或者<u>文件系统不是NTFS</u>，导入数据时会复制并生成第二份文件。由于Lazer默认数据存储位置在C盘，可能会导致**C盘爆红**。
+如果您的 Lazer 和 stable <u>没有安装在同一驱动器下</u>，或者<u>文件系统不是 NTFS</u>，导入数据时会复制并生成第二份文件。由于 Lazer 默认数据存储位置在 C 盘，可能会导致 **C 盘爆红**。
 
-可以点击“导入之前的游戏数据”上方蓝色小字“**更改osu!文件夹位置..**”来更改Lazer的数据存储路径。
+可以点击“导入之前的游戏数据”上方蓝色小字“**更改osu!文件夹位置..**”来更改 Lazer 的数据存储路径。
 
 :::
 
@@ -136,6 +136,7 @@ Lazer 会自动检测您计算机上 stable 的安装位置。如果路径错误
 - 若您已有账号，可以直接输入信息并登录了。
 
   ![输入验证码](img/auth-code.png)
+
   可能会要求您输入验证码，请在您的电子邮件收件箱中找到并输入进去。
 - 若您还没有账号，请点击 **“注册”**，按照要求填入所需信息后提交。
   ![创建账号](img/new-account.png)

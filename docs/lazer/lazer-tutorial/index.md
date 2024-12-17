@@ -25,8 +25,8 @@ osu!lazer 仍处于开发阶段，因此在不同设备上可能会出现程度�
 :::info 作者信息
 
 - 闰土家的猹（原作者，osu!ID: [Naughty_chas](https://osu.ppy.sh/users/15349720)），欢迎来mu我！
-- 复予（修订，GitHub: [CloneWith](https://github.com/CloneWith)），萌新/写文档的人
+- 复予（GitHub: [CloneWith](https://github.com/CloneWith)），萌新说的道理
 
-发现文档中有漏洞或者错误，欢迎在评论区留下意见，或者通过osu!账号联系我。感激不尽🙏
+发现文档中有漏洞或者错误，欢迎在评论区留下意见，或者通过 osu! 账号联系我们。感激不尽🙏
 
 :::
