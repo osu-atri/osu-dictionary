@@ -17,20 +17,21 @@ osu!lazer 将工具栏分为左右两部分，将依次进行介绍：
 ### 左栏
 
 - <OsuIcon icon="settings" label="设置按钮" scale="0.025" invert="true" reverse="true" />：点击后可打开游戏设置面板，也可以使用 `Ctrl + O`。
-- <OsuIcon icon="home" label="主页按钮" scale="0.025" invert="true" reverse="true" />：点击后可以回到主菜单。你也可以使用 `Alt + Home`回到主菜单。
+- <OsuIcon icon="home" label="主页按钮" scale="0.025" invert="true" reverse="true" />：点击后可以回到主菜单。你也可以使用 `Alt + Home` 回到主菜单。
 - ![游戏模式选择](img/modes.png)：展示了目前Lazer中可用的游戏模式。
-  - 默认的四个内置游戏模式：osu!、osu!taiko、osu!catch 和 osu!mania排列在左侧；右侧出现的其他图标代指已经安装的其他Ruleset。
-  - 有关更多安装Ruleset的内容可以在[**这里**](/docs/lazer/tips/ruleset-man.md)获取详细信息。
+  - 默认的四个内置游戏模式：osu!、osu!taiko、osu!catch 和 osu!mania 排列在左侧；右侧出现的其他图标代指已经安装的其他 Ruleset。
 
 :::tip 小提示
 
 你可以按照游戏模式顺序，按下 `Ctrl + 数字键`快速跳转到相应模式。
 
+有关更多安装 Ruleset 的内容可以在[**这里**](/docs/lazer/tips/ruleset-man.md)获取详细信息。
+
 :::
 
 ### 右栏
 
-Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧的按钮访问下列界面：
+Lazer 已经将网站的大多数功能嵌入进了游戏。你可以使用右侧的按钮访问下列界面：
 
 | 图标 | 功能 | 备注 |
 | :-: | :-: | :-: |
@@ -48,10 +49,10 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 ![正在播放面板](img/now-playing.png)
 
 - ![用户栏](img/user-bar.png)：点击打开你的用户页。
-  - 这一部分还可以在完成单次游戏后显示排名和pp信息。就像这样：
+  - 这一部分还可以在完成单次游戏后显示排名和 pp 信息。就像这样：
   ![排名下降了](img/rank-down.gif)
 - ![时间栏](img/time-12.png)：显示时间信息。
-  - 下面的 <FntColor color="#ff99cc">**running ##:##:##**</FntColor>展示了Lazer本次已经运行的时长。
+  - 下面的 <FntColor color="#ff99cc">**running ##:##:##**</FntColor>展示了 Lazer 本次已经运行的时长。
   - 可以点击该区域切换时钟样式，一共四种：
     - ![模拟时钟](img/time-analog.png)
     - ![模拟+数字时钟+运行时间](img/time-12.png)
@@ -61,7 +62,7 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 ## 通知与通知栏
 
-通知栏区域存放了Lazer的各种通知。
+通知栏区域存放了 Lazer 的各种通知消息。
 
 ### 弹出通知
 
@@ -175,7 +176,7 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 ![模组选择界面](img/mods-list.png)
 
-看不懂Lazer的新mod什么意思？**鼠标悬停在mod上方可以显示预览**。
+看不懂 Lazer 的新mod什么意思？**鼠标悬停在mod上方可以显示预览**。
 
 ![显示的模组描述](img/mod-description.png)
 
@@ -195,13 +196,13 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 #### 模组设置
 
-在Lazer中，一些mods允许你进行进一步的配置。比如Double Time。点击左下角“自定义模组”按钮来详细配置mod。如果你选择了多个mod，则会在面板上显示所有可供配置的mod设置。
+在 Lazer 中，一些mods允许你进行进一步的配置。比如 Double Time。点击左下角“自定义模组”按钮来详细配置mod。如果你选择了多个mod，则会在面板上显示所有可供配置的mod设置。
 
 ![模组设置](img/mod-setting.png)
 
 ---
 
-![随机](img/random-button.png)按钮会让Lazer通过设置中的算法为你随机挑选一张谱面。
+![随机](img/random-button.png)按钮会让 Lazer 通过设置中的算法为你随机挑选一张谱面。
 
 :::tip 小提示
 
@@ -241,7 +242,7 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 搜索框不仅可以执行常规的字符串匹配搜索，还可以使用下面的比较符和关键词进行高级搜索。
 
-这些是在Lazer中可以使用的比较符：
+这些是在 Lazer 中可以使用的比较符：
 
 | **比较符** | **描述** |
 | :-: | :-: |
@@ -337,6 +338,6 @@ Lazer已经将网站的大多数功能嵌入进了游戏。你可以使用右侧
 
 使用键盘上的 `Z` 键和 `X` 键击打物件，使用你的鼠标/数位板/手柄/触摸屏等位置输入设备来精准定位要击打的物件！你也可以在设置中，绑定适合自己的键位设定。
 
-下面的教程假设你已经知道如何游玩osu!主模式。如果你还不清楚osu!怎么玩，推荐你获取[这张谱面](https://osu.ppy.sh/beatmapsets/1011011#osu/2116202)来学习一下！
+下面的教程假设你已经知道如何游玩 osu! 主模式。如果你还不清楚 osu! 怎么玩，推荐你获取[这张谱面](https://osu.ppy.sh/beatmapsets/1011011#osu/2116202)来学习一下！
 
 ![新手教程卡](img/beginner-card.png)
