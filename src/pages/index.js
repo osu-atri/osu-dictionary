@@ -15,6 +15,11 @@ function HomepageHeader() {
   // Should we keep this button?
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      <div className="video-background">
+        <video autoPlay loop muted playsInline>
+          <source src="landing.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
