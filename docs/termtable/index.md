@@ -6,7 +6,7 @@ displayed_sidebar: termtableSidebar
 
 # osu! 中英翻译术语表
 
-欢迎来到 **osu! 中英翻译术语表！**
+欢迎来到 <Highlight color="#ff4296">**osu! 中英翻译术语表**</Highlight>！
 
 你可以使用这个术语表来：
 
