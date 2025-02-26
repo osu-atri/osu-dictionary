@@ -278,13 +278,11 @@ public override IEnumerable<Mod> GetModsFor(ModType type)
 
 对于以上这些，可以看看下面的[实例](#示例)。
 
-代码中的 `MultiMod` 用来将多个模组并入一组。
+:::tip `MultiMod` 的用法
 
-:::tip 问题
+`MultiMod` 可以将多个模组归入一个虚拟的“组”，主要是用来模拟 stable 中的快捷键行为，即一个按键绑定到一组模组，每一次按键按顺序激活一个模组；对于 FreeMod 选择这样的情况下，也支持一键选中整组模组。
 
-除了实现逻辑上的“分组”，使用 `MultiMod` 圈入多个模组有什么实质上的意义？
-
-这个问题可能在不久后得到回答。
+对于 lazer 模组快捷选择的实现逻辑，可以参考<LazerCode filePath="Overlays/Mods/Input/" fileName="ClassicModHotkeyHandler.cs"/>。
 
 :::
 

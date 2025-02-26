@@ -3,6 +3,7 @@ import React from "react";
 import MDXComponents from "@theme-original/MDXComponents";
 import Highlight from "@site/src/components/Highlight";
 import FntColor from "@site/src/components/FntColor";
+import LazerCode from "@site/src/components/LazerCode";
 
 export default {
   // Re-use the default mapping
@@ -11,4 +12,5 @@ export default {
   // `Highlight` will receive all props that were passed to `<Highlight>` in MDX
   Highlight,
   FntColor,
+  LazerCode,
 };
