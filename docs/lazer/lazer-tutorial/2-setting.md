@@ -86,7 +86,7 @@ import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 
 - 皮肤：`设置` -> `导出当前皮肤`
 - 回放：点击本地排行榜中的分数，按下 `F2`
-- 谱面：参见[lazer-stable 谱面互转指南](../tips/lazermap2st)
+- 谱面：使用编辑器导出为 `兼容优先 (.osz)` 格式，然后手动导入
 
 在此之后，请在 osu!lazer 的**数据目录**的 `exports` 文件夹中找到导出内容，并手动将其导入 osu!stable。
 
