@@ -63,6 +63,12 @@
     font-size: 1.5rem;
   }
 
+  .hero {
+    background: rgba(83, 44, 62, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .navbar {
     background: rgba(255, 179, 212, 0.6);
     backdrop-filter: blur(25px);
@@ -204,11 +210,17 @@
   animation: hue 0.25s ease forwards, enlarge 0.25s ease forwards;
 }
 
-.hero,
-.hero--primary {
-  background: url("/img/topbkg.jpg") !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-color: rgba(0, 0, 0, 0.3) !important;
-  background-blend-mode: color;
+.video-background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -100;
+}
+
+.video-background video {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
