@@ -28,6 +28,7 @@ flowchart LR
   designByDrawing("图像绘制")
   vectorGraph("矢量图设计")
   designByCoding("抽象代码")
+  shaderCode("着色器代码")
   markdownDocument("Markdown 文档")
   componentClass("UI 组件类<br />（多见于默认与模版组件）")
   textureStore("材质包")
@@ -43,12 +44,14 @@ flowchart LR
   indirectDesign --> vectorGraph
   indirectDesign --> markdownDocument
   indirectDesign --> designByCoding
+  indirectDesign --> shaderCode
   designByDrawing -- 打包 --> textureStore
   vectorGraph -- 转化后（可能）打包 --> textureStore
 
   textureStore -- 加载 --> lazerUI
   lazerUIEditor -- 自定义 --> lazerUI
   designByCoding -- 构建 --> componentClass
+  shaderCode -- GL 绘制 --> lazerUI
   componentClass -- 引用与实例化 --> lazerUI
   markdownDocument -- 渲染器渲染 --> lazerUI
 ```
