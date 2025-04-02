@@ -1,7 +1,7 @@
 import styles from "./SettingsUI.module.css";
 
 export function SettingsButton({ label, colorMode }) {
-  const backgroundClass = styles.backgroundPrimary;
+  let backgroundClass = styles.backgroundPrimary;
 
   switch (colorMode) {
     case "primary":

@@ -1,9 +1,8 @@
 export default function OsuIcon({ icon, label, scale, invert, reverse }) {
     // Invert the color of the icon on demand
-    const reverseClass = reverse
+    const reverseClass = invert ? "" : reverse
       ? "auto-invert-reversed"
       : "auto-invert";
-    if (!invert) reverseClass = "";
 
     return <img
     className={reverseClass}
