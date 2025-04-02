@@ -177,7 +177,7 @@ namespace osu.Game.Graphics
 
 :::info 为什么不是 `SpriteText`
 
-`SpriteText` 类定义在 osu!framework 中，是其他各种文本显示组件的基本组成部分，直接使用其显示文本会显得比较危险，同时也不利于管理，因此在项目层面 Ban 掉了这个类的直接使用。
+`SpriteText` 类定义在 osu!framework 中，是其他各种文本显示组件的基本组成部分，直接使用其显示文本会显得比较危险，同时也不利于管理，因此在项目层面 Ban 掉了这个类的直接使用（写在 `CodeAnalysis` 的 `BannedSymbols.txt` 里，因此说是项目层面）。
 
 针对这样的情况，开发者由此衍生出了 `OsuSpriteText` 类，默认使用带阴影的默认字体，在整个项目范围内广泛使用。与此相似的还有赛事客户端项目中的 `TournamentSpriteText` 类。
 
