@@ -2,31 +2,47 @@
 enableComments: true
 ---
 
-import slidersneakin from './img/slider-sneakin.gif';
-import slidernosneakin from './img/slider-nosneakin.gif';
-import slidersneakout from './img/slider-sneakout.gif';
-import slidernosneakout from './img/slider-nosneakout.gif';
-import bordernone from './img/border-none.jpg';
-import bordercorner from './img/border-corner.jpg';
-import borderfull from './img/border-full.jpg';
+import songselectBlur from './img/songselect-blur.png';
+import songselectClear from './img/songselect-clear.png';
+import sliderSneakIn from './img/slider-sneakin.gif';
+import sliderNoSneakIn from './img/slider-nosneakin.gif';
+import sliderSneakOut from './img/slider-sneakout.gif';
+import sliderNoSneakOut from './img/slider-nosneakout.gif';
+import borderNone from './img/border-none.jpg';
+import borderCorner from './img/border-corner.jpg';
+import borderFull from './img/border-full.jpg';
+import rankingWithFlag from './img/ranking-flag.png';
+import rankingNoFlag from './img/ranking-noflag.png';
+import fpsSingleThread from './img/fps-singlet.png';
+import fpsMultiThread from './img/fps-multit.png';
+import mapInfoZH from './img/mapcard-zh.png';
+import mapInfoJP from './img/mapcard-jp.png';
+import mapInfoOriginalZH from './img/mapcard-zh-org.png';
+import mapInfoOriginalJP from './img/mapcard-jp-org.png';
+import time12 from './img/time-12.png';
+import time24 from './img/time-24.png';
+import touchDDKK from './img/taiko-touch-DDKK.png';
+import touchKDDK from './img/taiko-touch-KDDK.png';
+
+import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
 
 # Part 2: 游戏设置
 
 在开始游戏前，推荐您先调整好你自己喜欢的游戏习惯。可以使用以下方式，打开设置面板：
 
-- 点击 osu! 粉饼后，点击左侧的![设置按钮](img/settings.png)（灰色）进入设置页面
-- 点击左上角的![设置按钮](img/settings.png)也可以进入设置。
+- 点击 osu! 粉饼后，点击左侧的 <OsuIcon icon="settings" label="设置按钮" scale="0.025" invert="true" reverse="true" /> 进入设置页面。
+- 点击左上角的 <OsuIcon icon="settings" label="设置按钮" scale="0.025" invert="true" reverse="true" /> 也可以进入设置。
 - 在游戏过程中的任何时候，您都可以使用快捷键 `Ctrl + O` 进入设置菜单。
 
 ![设置面板](img/setting-panel.png)
 
 打开设置页后，你可以直接输入你想搜索的设置条目。
 
-点击![复位](img/reset.png)按钮可以恢复该设置默认值。
+点击每个设置项左侧的 <FontAwesomeIcon icon={faArrowRotateLeft} style={{color: "#B299FF"}} /> 按钮可以恢复该设置默认值。
 
 :::warning 注意
 
-不同平台的设置显示的条目和选项可能不同。以下设置以 Windows 端为例，版本 `2024.625.2`。
+不同平台与版本的设置页面显示的条目和选项可能不同。以下设置以 Windows 端为例，版本 `2024.1208.0`。
 
 :::
 
@@ -41,19 +57,26 @@ import borderfull from './img/border-full.jpg';
 
 :::
 
-## 常规
+## <OsuIcon icon="settings" label="常规" scale="0.03" invert="true" reverse="true" /> 常规
 
-常规设置组包含了最基本的Lazer设置。
+常规设置组包含了最基本的设置。
 
 ![常规设置列表](img/general-list.png)
 
 - **“打开设置向导”** 可以再次启动之前提到过的首次启动设置。
-- 点击 **“进一步了解lazer”** 会跳转到 osu! wiki 中的“[升级到 lazer](https://osu.ppy.sh/wiki/zh/Help_centre/Upgrading_to_lazer)”页面。
+- 点击 **“进一步了解lazer”** 会跳转到 osu!wiki 中的“[升级到 lazer](https://osu.ppy.sh/wiki/zh/Help_centre/Upgrading_to_lazer)”页面。
 - 打开 **“使用原语言展示谱面信息”** 会在选歌页面使用歌曲的原语言展示歌曲信息。
 
-  ![中文谱面罗马表示](img/mapcard-zh.png) →![中文谱面原文表示](img/mapcard-zh-org.png)
-
-  ![日文谱面罗马表示](img/mapcard-jp.png) →![日文谱面原文表示](img/mapcard-jp-org.png)
+<table>
+  <tr>
+    <td><img src={mapInfoZH} alt="中文谱面罗马表示" /><br />中文谱面罗马表示</td>
+    <td><img src={mapInfoOriginalZH} alt="中文谱面原文表示" /><br />中文谱面原文表示</td>
+  </tr>
+  <tr>
+    <td><img src={mapInfoJP} alt="日文谱面罗马表示" /><br />日文谱面罗马表示</td>
+    <td><img src={mapInfoOriginalJP} alt="日文谱面原文表示" /><br />日文谱面原文表示</td>
+  </tr>
+</table>
 
 :::info 双修玩家请注意！
 
@@ -63,19 +86,25 @@ import borderfull from './img/border-full.jpg';
 
 - 皮肤：`设置` -> `导出当前皮肤`
 - 回放：点击本地排行榜中的分数，按下 `F2`
-- 谱面：参见[lazer-stable 谱面互转指南](../tips/lazermap2st)
+- 谱面：使用编辑器导出为 `兼容优先 (.osz)` 格式，然后手动导入
 
 在此之后，请在 osu!lazer 的**数据目录**的 `exports` 文件夹中找到导出内容，并手动将其导入 osu!stable。
 
 :::
 
-- **“使用24小时制时间”** 会在右上角的时间显示部分使用24小时制展示当前时间。
+- **“使用24小时制时间”** 会在右上角的时间显示部分使用 24 小时制展示当前时间。
 
-  ![12 小时制](img/time-12.png)→![24 小时制](img/time-24.png)
-- **“检查更新”** 顾名思义。
-- **“打开osu!文件夹”** 会使用系统文件管理器打开Lazer的安装文件夹。
-- **“导出日志”** 会将日志导出到Lazer安装目录下 `exports` 文件夹内。导出的日志以压缩包 `compressed-logs.zip` 的样式呈现。
-- **“更改osu!文件夹位置”** 可以更改Lazer的安装位置。推荐各位在初次安装后先迁移自己的Lazer安装位置。
+<table>
+  <tr>
+    <td><img src={time12} alt="中文谱面罗马表示" /><br />12 小时制</td>
+    <td><img src={time24} alt="中文谱面原文表示" /><br />24 小时制</td>
+  </tr>
+</table>
+
+- **“检查更新”** 手动检查更新，不过这个过程一般会由 Lazer 在启动时完成。
+- **“打开osu!文件夹”** 会在系统文件管理器中打开 Lazer 的安装文件夹。
+- **“导出日志”** 会将日志导出到 Lazer 安装目录下 `exports` 文件夹内。导出的日志以压缩包 `compressed-logs.zip` 的样式呈现。
+- **“更改osu!文件夹位置”** 可以更改 Lazer 数据的存储位置。推荐各位在初次安装后先迁移自己的 Lazer 安装位置。
 
 :::danger 备用方法（危险！）
 
@@ -89,7 +118,7 @@ import borderfull from './img/border-full.jpg';
 
 :::
 
-## 皮肤
+## <OsuIcon icon="skin-b" label="皮肤" scale="0.03" invert="true" reverse="true" /> 皮肤
 
 皮肤设置组包含了对皮肤的各种操作。
 
@@ -104,12 +133,12 @@ import borderfull from './img/border-full.jpg';
 :::
 
 - **“皮肤布局编辑器”** 可以编辑皮肤的各种样式，或者添加各种组件。有关这部分的使用教程会单独拉出一块篇幅介绍。
-- **“导出当前皮肤”** 按钮会将当前选中的皮肤导出至.osk文件。同样，皮肤文件会导出到Lazer目录下`exports`文件夹内。
+- **“导出当前皮肤”** 按钮会将当前选中的皮肤导出至 `.osk` 文件。同样，皮肤文件会导出到 Lazer 目录下 `exports` 文件夹内。
 - **“删除当前的皮肤”** 就是删除当前的皮肤，没啥好说的。
 
-## 输入
+## <OsuIcon icon="input" label="输入" scale="0.03" invert="true" reverse="true" /> 输入
 
-输入设置组决定了Lazer处理你输入的方式。
+输入设置组决定了 Lazer 处理你输入的方式。
 
 ![输入设置列表](img/input-list.png)
 
@@ -123,7 +152,7 @@ import borderfull from './img/border-full.jpg';
 
 ### 数位板
 
-若开启此小节下的**启用**开关，则Lazer会使用**内置**的数位板驱动处理数位板输入。
+若开启此小节下的**启用**开关，则 Lazer 会使用**内置**的数位板驱动处理数位板输入。
 
 :::warning 警告
 
@@ -135,7 +164,7 @@ import borderfull from './img/border-full.jpg';
 
 如果你是数位板玩家，想必你一定会使用 OpenTabletDriver。**禁用此选项以允许 OTD 接管你的数位板输入。**
 
-若启用处理并且数位板已连接，Lazer会按照下面的设置处理你的数位板输入：
+若启用处理并且数位板已连接，Lazer 会按照下面的设置处理你的数位板输入：
 
 ![数位板输入设置](img/tablet-list.png)
 
@@ -148,17 +177,17 @@ import borderfull from './img/border-full.jpg';
 
 ### 鼠标
 
-- **“高精度鼠标”** 会尝试绕过任何系统级别的鼠标加速。同样的选项在stable中叫做“原始输入”。
+- **“高精度鼠标”** 会尝试绕过任何系统级别的鼠标加速。同样的选项在 stable 中叫做“原始输入”。
 
 仅当启用了高精度鼠标后，才可以调整游戏内鼠标灵敏度。
 
 - **“将光标限制在窗口内”** 在全屏模式下不可用。仅当窗口模式下可以调整该设置。
-- **“在游戏中禁用鼠标滚轮调整音量”** 顾名思义。注意，如果此选项被禁用，你仍然可以使用 `Alt+滚轮`调整音量。
+- **“在游戏中禁用鼠标滚轮调整音量”** 顾名思义。此选项被禁用时，你仍然可以使用 `Alt+滚轮`调节音量。
 - **“在游戏中禁用鼠标点击”** 同理。
 
-## 用户界面
+## <OsuIcon icon="user-interface" label="用户界面" scale="0.03" invert="true" reverse="true" /> 用户界面
 
-用户界面设置组决定了Lazer的外观。
+用户界面设置组决定了 Lazer 的外观。
 
 ![用户界面设置列表](img/ui-list.png)
 
@@ -172,18 +201,18 @@ import borderfull from './img/border-full.jpg';
 - **“菜单提示”** 决定主页底部是否显示小提示，与 stable 中的提示一个性质。
 
   ![菜单提示展示](img/menutip.png)
-- **“osu!主题音乐”** 决定Lazer在启动时是否播放主题音乐。
-- Lazer提供了三种不同的启动动画。使用下拉菜单来选择你喜欢的启动动画，或者使用“Random”随机选择启动动画。
+- **“osu!主题音乐”** 决定 Lazer 在启动时是否播放主题音乐。如果不启用，启动时则会先播放 stable 的钢琴启动声，然后淡出随机切到一首歌曲。
+- Lazer 提供了三种不同的启动动画。使用下拉菜单来选择你喜欢的启动动画，或者使用“Random”在启动时随机播放启动动画。
 
   ![启动动画设置](img/intro-setting.png)
-- **“背景图片来源”** 决定主菜单背景显示的内容。你可能需要osu! 支持者来启用该功能。
+- **“背景图片来源”** 决定主菜单背景显示的内容。你可能需要 osu! 支持者来启用该功能。
 
   ![背景图来源设置](img/bkg-source.png)
 
 ### 选择歌曲
 
 - **“按住鼠标右键快速滚动”** 允许你以超快的速度浏览谱面，像在 stable 中一样。
-- **“显示转谱”** 决定在osu!mania、osu!taiko和osu!catch模式下是否显示从osu!模式转换过来的谱面。你也可以使用选歌界面的![“显示转谱”开关](img/convert-toggle.png)改变该设定。
+- **“显示转谱”** 决定在 osu!mania、osu!taiko 和 osu!catch 模式下是否显示从 osu! 模式转换过来的谱面。你也可以使用选歌界面的![“显示转谱”开关](img/convert-toggle.png)改变该设定。
 - **“随机选择算法”** 允许你更改随机选择谱面功能的随机算法。使用选歌界面左下方的![随机选择按钮](img/random-button.png)可以随机选择谱面。
 
   ![随机算法设置](img/random-setting.png)
@@ -192,47 +221,52 @@ import borderfull from './img/border-full.jpg';
 - **“在选择模组时自动聚焦搜索框”** 允许你更方便地搜索模组。启用后点击mod菜单，可以直接输入你想检索的模组。
 - **“背景模糊”** 决定选歌界面的背景曲绘是否做模糊处理。
 
-  ![启用模糊](img/songselect-vague.png "启用模糊")![禁用模糊](img/songselect-clear.png "禁用模糊")
+<table>
+  <tr>
+    <td><img src={songselectBlur} alt="启用模糊" />启用模糊</td>
+    <td><img src={songselectClear} alt="禁用模糊" />禁用模糊</td>
+  </tr>
+</table>
 
-## 游戏
+## <OsuIcon icon="gameplay-c" label="游戏" scale="0.03" invert="true" reverse="true" /> 游戏
 
-游戏设置组决定Lazer在游戏过程中的行为表现。
+游戏设置组决定 Lazer 在游戏过程中的行为表现。
 
 ![游戏设置列表](img/gameplay-list.png)
 
 ![HUD 显示设置](img/hud-list.png)
 
-这一部分的设置与stable几乎一致。下面只会介绍Lazer新加入的设置：
+这一部分的设置与 stable 几乎一致。下面只会介绍 Lazer 新加入的设置：
 
 - **“分数显示模式”** 选项允许您更改Lazer中游戏内，排行榜上的分数显示模式。下拉菜单中共有两项设置：**“标准”** 和 **“经典”**：
-  - **“标准”** 会将分数标准化至1000000分显示。
+  - **“标准”** 会将分数标准化至 1000000 分显示。
 
   ![满分成绩示例（标准）](img/score-std.png "满分成绩示例（标准）")
-  - **“经典”** 会尽可能还原stable的计分方式，分数上不封顶。（一般情况下）
+  - **“经典”** 会尽可能还原 stable 的计分方式，分数上不封顶。（一般情况下）
 
   ![满分成绩示例（经典）](img/score-classic.png "满分成绩示例（经典）")
 
 :::warning 注意
 
-**更改此选项不会导致Lazer的计分算法发生变化。** 该选项仅影响分数的显示方式。
+**更改此选项不会导致 Lazer 的计分算法发生变化。** 该选项仅影响分数的显示方式。
 
 :::
 
-由于Lazer使用了新版的计分机制，“经典”分数显示模式不会一比一还原stable的计分逻辑，因此，同样的成绩在stable和Lazer端的显示值并不一致。你可以在这里<!-- TODO -->（链接）找到更多有关于stable和Lazer的计分方法的信息。
+由于 Lazer 使用了新版的计分机制，“经典”分数显示模式不会一比一还原 stable 的计分逻辑，因此，同样的成绩在 stable 和 Lazer 端的显示值并不一致。你可以在这里<!-- TODO -->（链接）找到更多有关于 stable 和 Lazer 的计分方法的信息。
 
 ---
 
 - **“打击音效立体声分离度”** 决定打击音效声像的分离程度，也就是决定了打击音效在左右声道播放的响度差大小。
-- **“总是播放第一次连击中断的提示音”** 将保证第一次连击中断一定会播放 ~~令人绝望的~~ miss提示音。
+- **“总是播放第一次连击中断的提示音”** 将保证第一次连击中断一定会播放 ~~令人绝望的~~ miss 提示音。
 - **“当血量低时屏幕变红”** 顾名思义。当快要似了时候屏幕两边会变红。
 
   ![哎你怎么似了](img/failing-red.jpg "哎你怎么似了")
-- **“是否显示HUD”** 决定游戏时HUD的显示逻辑。
+- **“是否显示HUD”** 决定游戏时 HUD 的显示逻辑。
 
   ![HUD 显示开关](img/hud-setting.png)
-  - **“不显示”** 使HUD在游戏过程中一直不可见。
-  - **“游戏时隐藏”** 会使得HUD在休息段，开始或结束时显示。一旦进入游戏过程便隐藏HUD。
-  - **“总是显示”** 会使得HUD一直显示。
+  - **“不显示”** 各种情况下一直隐藏。
+  - **“游戏时隐藏”** HUD 会在游玩时的休息段、开始或结束时，以及观看回放、旁观他人时全程显示，游玩过程中隐藏。
+  - **“总是显示”** 各种情况下一直显示。
 
 :::tip 小提示
 
@@ -240,20 +274,21 @@ import borderfull from './img/border-full.jpg';
 
 :::
 
-- **“显示回放设置界面”** 决定在观看回放时，右上角是否显示回放操作面板。
+- **“显示回放设置界面”** 启用后，在观看回放显示 HUD 时，光标移到屏幕右侧会弹出回放控制面板。
 
   ![回放控制面板](img/replay-setting.png)
 
-  可以使用`Ctrl + H`快捷键在播放回放界面快速更改此设置。
+  可以使用 `Ctrl + H` 快捷键在播放回放界面快速更改此设置。
+- **“长按按键暂停游戏”** 禁用时，游戏过程中只要按下暂停键就会暂停游戏；启用后则需要长按一段时间才会暂停。
+- **“总是显示长按菜单按钮”** 一般情况下，长按菜单按钮只会在使用触摸屏游玩时，光标靠近右下方时主动显示，便于玩家进行暂停。启用后，无论何时光标靠近按钮区域均会显示（可能会影响到游玩）。
 
-## 游戏模式
+## <OsuIcon icon="rulesets" label="游戏模式" scale="0.03" invert="true" reverse="true" /> 游戏模式
 
-游戏模式设置组可以调整不同游戏模式下Lazer的表现。如果你安装了自定义模式 (Ruleset)，那么对应的设置也会出现在这里。
-
+游戏模式设置组可以调整不同游戏模式下 Lazer 的表现。如果你安装了自定义模式 (Ruleset)，那么对应的设置也会出现在这里。
 
 :::info
 
-你可以在[**这里**](/docs/lazer/tips/ruleset-man.md)阅读更多有关Ruleset的内容
+你可以在[**这里**](/docs/lazer/tips/ruleset-man.md)阅读更多有关 Ruleset 的内容。
 
 :::
 
@@ -263,70 +298,96 @@ import borderfull from './img/border-full.jpg';
 
 同上，我们还是介绍几个新加入的、值得介绍的设置。
 
+### osu!
+
 - **“渐入滑条”** 决定是否启用滑条平滑进入动画。
 - **“渐出滑条”** 决定是否启用滑条平滑结束动画。
 
-
-<table>
+  <table>
     <tr>
-        <td><img src={slidersneakin} />渐入滑条 开</td>
-        <td><img src={slidernosneakin} />渐入滑条 关</td>
+      <td><img src={sliderSneakIn} alt="渐入滑条动图"/>渐入滑条·开</td>
+      <td><img src={sliderNoSneakIn} alt="不渐入滑条动图" />渐入滑条·关</td>
     </tr>
     <tr>
-        <td><img src={slidersneakout} />渐出滑条 开</td>
-        <td><img src={slidernosneakout} />渐出滑条 关</td>
+      <td><img src={sliderSneakOut} alt="渐出滑条动图" />渐出滑条·开</td>
+      <td><img src={sliderNoSneakOut} alt="不渐出滑条动图" />渐出滑条·关</td>
     </tr>
-</table>
+  </table>
 
-  如果你喜欢stable的滑条显示逻辑，则可将“渐出滑条”关闭。
+  如果你喜欢 stable 的滑条显示逻辑，则可将“渐出滑条”关闭。
 - **“游戏区域边框样式”** 决定是否在游玩过程中显示区域边框。
 
   ![边框设置](img/border-setting.png)
 
-<table>
+  <table>
     <tr>
-        <td><img src={bordernone} />不显示</td>
-        <td><img src={bordercorner} />仅显示边框角</td>
-        <td><img src={borderfull} />全边框</td>
+      <td><img src={borderNone} alt="无边框效果图" />不显示</td>
+      <td><img src={borderCorner} alt="边框角效果图" />仅显示边框角</td>
+      <td><img src={borderFull} alt="全边框效果图" />全边框</td>
     </tr>
-</table>
+  </table>
 
   在“全边框”和“仅显示边框角”两个选项之间切换甚至可以欣赏到丝滑的动画。
 
-## 音频
+### osu!taiko
 
-音频设置组控制Lazer的音频输出和全局偏移调整。
+- **“触摸控制方案”** 这个设置只影响用触摸屏玩 osu!taiko 的玩家。三个选项对应三种不同的按键布局。如果觉得外侧按键太小容易点错颜色，则可以试试 `DDKK` 与 `KKDD` 这两种布局，将相同颜色的按键分配到一边。
+
+<table>
+  <tr>
+    <td><img src={touchKDDK} alt="KDDK 按键布局" />KDDK 按键布局</td>
+    <td><img src={touchDDKK} alt="DDKK 按键布局" />DDKK 按键布局</td>
+  </tr>
+</table>
+
+### osu!mania
+
+- **滚动方向** 与 **滚动速度** 将 stable 中藏在按键设置里的方向调节功能集成出来了，相对前者调节起来会方便得多。
+- **“根据节拍给物件上色”** 根据物件所处的节拍，将物件标上不同的颜色，从而方便读图。这项设置的功能与 STD 中的 *Synethesia* 模组相似。
+
+:::note 冷知识
+
+物件的上色与编辑器中不同时值对应的颜色是相同的。
+
+:::
+
+## <OsuIcon icon="audio" label="音频" scale="0.03" invert="true" reverse="true" /> 音频
+
+音频设置组控制 Lazer 的音频输出和全局偏移调整。
 
 ![音频设置列表](img/audio-list.png)
 
 这里的大部分内容应该不需要解释说明，但是下面的音频偏移还是值得一说的。
 
-调整 **“音频偏移”** 设置可以调整Lazer的 **全局偏移**，而不是谱面偏移。如果您在使用蓝牙耳机或者延迟较大的设备进行游戏，请优先调整该项设置。
+**“音频偏移”** 设置可以调整 Lazer 的 **全局偏移**，而不是谱面偏移。如果您在使用蓝牙耳机或者延迟较大的设备进行游戏，请优先调整该项设置。
 
-Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游戏，Lazer就会根据你的游玩情况计算一个合适的偏移量。如果你觉得所有谱面打起来偏移奇怪，不妨试试使用推荐偏移。
+与 stable 相比，Lazer 加入了自动计算偏移功能。在 Lazer 中进行一些游戏，Lazer 就会根据你的游玩情况计算一个合适的偏移量。如果你觉得所有谱面打起来偏移奇怪，不妨试试使用推荐偏移。
 
 如果你觉得大部分的谱面打起来还算舒服，而个别的谱面打起来比较奇怪，推荐不要调整全局偏移，而是调整单个谱面的偏移。
 
-## 图像
+## <OsuIcon icon="graphics" label="图像" scale="0.03" invert="true" reverse="true" /> 图像
 
-图像设置组控制Lazer如何输出渲染图像。本节设置比较影响性能表现。
+图像设置组控制 Lazer 如何输出渲染图像。本节设置比较影响性能表现。
 
 ![图像设置列表](img/graphics-list.png)
 
 ![视频、截图等设置](img/video-list.png)
 
-- **“显示模式”** 下拉菜单提供三种显示模式。“Windowed”窗口模式，“Fullscreen”全屏模式和“Borderless”无边框窗口模式。
+- **“显示模式”** 下拉菜单提供三种显示模式：
+  - Windowed - 窗口模式
+  - Fullscreen - 全屏模式
+  - Borderless - 无边框窗口模式
 
 :::tip 建议
 
-优先推荐大家使用全屏模式！全屏模式能够在大部分情况下带来最低的输入延迟。
+优先推荐大家使用全屏模式！全屏模式能够在大部分情况下带来最高的帧率与最低的输入延迟。
 
 :::
 
-- **“界面缩放”** 决定UI的大小。
+- **“界面缩放”** 决定 UI 的大小。
 - **“渲染器”** 下拉菜单提供了五个选项，四个不同的渲染器。
-  - “Automatic”可以让Lazer自动选择最适合您电脑的渲染器。
-  - Vulkan (Experimental) 和 Direct3D 11(Experimental) 为测试阶段的渲染器。需要注意它们可能表现起来不够稳定。如果你在使用默认的D3D11或者OpenGL出现了渲染问题，不妨试一下这两个渲染器。
+  - “Automatic”可以让 Lazer 自动选择最适合您电脑的渲染器。
+  - Vulkan (Experimental) 和 Direct3D 11 (Experimental) 为测试阶段的渲染器。需要注意它们可能表现起来不够稳定。如果你在使用默认的 D3D11 或者 OpenGL 出现了渲染问题，不妨试一下这两个渲染器。
 
   ![渲染器设置](img/renderer-setting.png)
 
@@ -336,23 +397,26 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
 
 :::
 
-- **“帧数限制”** 可以更改你的最大帧数限制。由于Lazer的底层结构重构，在启用多线程的情况下， **判定精准度不再与帧数挂钩**。因此，您可以在这里选择您和您设备都喜欢的帧数限制，而不需要担心判定问题。
-  - **Lazer中不存在绝对的帧数无限制选项。** “Basically unlimited”可以达到类似的效果，不过这个选项会将帧率限制在1000fps。
+- **“帧数限制”** 可以更改你的最大帧数限制。由于 Lazer 的底层结构重构，在启用多线程的情况下，**判定精准度不再与帧数挂钩**。因此，您可以在这里选择您和您设备都喜欢的帧数限制，而不需要担心判定问题。
+  - **Lazer中不存在绝对的帧数无限制选项。** “Basically unlimited”可以达到类似的效果，不过这个选项会将帧率限制在 1000fps。
 
   ![帧数设置](img/frate-setting.png)
-- **“线程模式”** 决定Lazer运行的线程模式。
-  - **“单线程”** 使得Lazer将所有任务严格限制在一个线程上运行。
+- **“线程模式”** 决定 Lazer 运行的线程模式。
+  - **“单线程”** 使得 Lazer 将所有任务严格限制在一个线程上运行。
+  - **“多线程”** 使得 Lazer 将不同的任务规划在不同的线程上运行。
 
-  ![单线程帧率](img/fps-singlet.png)
-  - **“多线程”** 使得Lazer将不同的任务规划在不同的线程上运行。
-
-  ![多线程帧率](img/fps-multit.png)
+  <table>
+    <tr>
+      <td><img src={fpsSingleThread} alt="单线程帧率显示" /><br />单线程帧率</td>
+      <td><img src={fpsMultiThread} alt="多线程帧率显示" /><br />多线程帧率</td>
+    </tr>
+  </table>
 
 :::info 请使用多线程！
 
-**推荐各位打开多线程！**多线程会单独处理你的判定。即使您的Lazer运行在帧数极低，甚至卡帧，也能为你带来最精准的判定。如果您觉得多线程的判定手感奇怪，随时可以在该设置中修改Lazer的运行方式。
+**推荐各位打开多线程！** 多线程会单独处理你的判定。即使您的 Lazer 帧率不高或有卡帧，也能为你带来最精准的判定。如果您觉得多线程的判定手感奇怪，随时可以在该设置中修改 Lazer 的运行方式。
 
-想了解更多有关于Lazer中帧数和延迟的关系，可以在文章中的本节<!-- TODO -->（待补充）找到更多信息。
+想了解更多有关于 Lazer 中帧数和延迟的关系，可以在文章中的本节<!-- TODO -->（待补充）找到更多信息。
 
 :::
 
@@ -362,47 +426,48 @@ Lazer相对stable加入了自动计算偏移功能。在Lazer中进行一些游�
 
 像上两个图片一样，鼠标悬停在上方会显示各个线程的每秒帧率和延迟。
 
-## 在线
+## <OsuIcon icon="online" label="在线" scale="0.03" invert="true" reverse="true" /> 在线
 
 在线设置组决定Lazer如何共享或使用在线资源。
 
 ![在线设置列表](img/online-list.png)
 
 - **“打开外部链接时弹出警告”** 会在游戏中尝试打开外部链接时弹出确认弹窗。
-  - 该选项不会对 `osu.ppy.sh` 域名下的链接打开请求作出限制（`osu.ppy.sh/news` 除外）。
+  - 该选项不会对 `osu.ppy.sh` 域名下的链接打开请求作出限制。
   ![外链警告](img/extlink-warning.png)
-- **“自动下载所需的谱面”** 会在准备旁观他人游戏时或其他时机，自动通过osu!Direct下载所需的谱面。
-  - 由于Lazer中，osu!Direct功能已经开放给所有玩家使用，此选项所有人可以选择开启。
-- **“隐藏国家或地区旗”** 会隐藏界面上的所有国旗，非常适合在直播时防止被超管（尤其是国内直播平台）当场拿下直播间。
+- **“下载谱面时不带视频”** 启用后，只会下载谱面必要的文件。如果你的下载速度过慢，甚至影响到多人游戏与旁观的正常进行，可以考虑启用此选项。
+- **“自动下载所需的谱面”** 会在准备旁观他人游戏时或其他时机，自动通过游戏内部功能下载谱面。除非存储空间不足或使用流量网络，建议启用此选项。
+- **“隐藏国家或地区旗”** 会将界面上的所有国旗改为问号旗，对于避免内容审查（如超管抽查直播间）非常有用。
 
-  ![禁用该选项](img/ranking-noflag.png "禁用该选项")![启用该选项](img/ranking-flag.png "启用该选项")
+<table>
+  <tr>
+    <td><img src={rankingWithFlag} alt="正常旗子效果图" />显示国家或地区旗</td>
+    <td><img src={rankingNoFlag} alt="问号旗效果图" />隐藏国家或地区旗</td>
+  </tr>
+</table>
 
-## 维护
+## <OsuIcon icon="maintenance" label="维护" scale="0.03" invert="true" reverse="true" /> 维护
 
-维护设置组提供了不少便利的选项，这里按钮上功能已经写得很明白了所以不多赘述。
+维护设置组中，值得一提的是 **“运行延迟验证器”**。点击之后会打开新窗口，帧数限制会自动调整至无限制。你可以通过“做题”的方式，来判断不同的刷新率对Lazer中延迟的影响。更多的技术性内容可以在[这里](https://github.com/ppy/osu/wiki/Latency-and-unlimited-frame-rates#latency-certifier-mini-game)找到。
 
-![维护设置列表](img/maintenance-list.png)
+做题的规则是：总是选择你感觉**更丝滑**的那一边。
 
-之前提到过Lazer中的删除操作都是软删除。因此如果你不小心误删了谱面或者mod预设，可以在这里选择恢复。
+![验证器界面](img/latency-certifier.png)
+
+除此之外，维护设置组提供了不少便利的选项，这里按钮上功能已经写得很明白了所以不多赘述。
+
+之前提到过 Lazer 中的删除操作都是软删除。因此如果你不小心误删了谱面或者mod预设，可以在这里选择恢复。
 
 :::warning 注意
 
-**所有恢复操作仅在此次游戏运行期间生效！** 如果你删除了内容并且退出了游戏，即使使用这些恢复按钮，那么这些内容将无法被找回。同样地，如果你在运行期间更改了 Lazer 的主目录，恢复按钮也无法撤销这种更改。
-
-因此，进行重大操作时请务必**谨慎**。**不要**使用数据恢复工具，Lazer 的文件存储系统可不是那么好对付的。
+**所有恢复操作仅在此次游戏运行期间生效！** 如果你删除了内容并且退出了游戏，即使使用这些恢复按钮，那么这些内容将无法被找回。同样地，如果你在运行期间更改了 Lazer 的主目录，恢复按钮也无法撤销这种更改。因此，进行重大操作时请务必**三思而后行**。
 
 :::
 
-## 调试
+:::note 提示
 
-调试部分提供了大部分玩家平常使用不到的功能。
+在最近的版本中，开发团队删除了一些调试相关的按钮。
 
-![调试设置列表](img/debug-list.png)
+这些按钮的行为多与 lazer 的存储机制有关，这个我们之后再细讲。
 
-- **“运行延迟验证器”** 选项会打开新窗口，帧数限制会自动调整至无限制。你可以通过“做题”的方式来判断在不同的刷新率下，在Lazer中的延迟实际上没有任何影响。更多的技术性内容可以在[这里](https://github.com/ppy/osu/wiki/Latency-and-unlimited-frame-rates#latency-certifier-mini-game)找到。
-  - 做题的规则是：总是选择你感觉更丝滑的那一边。
-
-  ![验证器界面](img/latency-certifier.png)
-- "Block realm", "Unblock realm"和"Compact realm"与Lazer的数据库处理相关。作为普通玩家一般不需要管这些设置。
-
-了解更多有关于Lazer存储结构的知识，可以在本节<!-- TODO -->（待补充）中找到更多信息。
+:::

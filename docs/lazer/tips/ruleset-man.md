@@ -4,6 +4,12 @@ enableComments: true
 
 # lazer ruleset 快速上手指南
 
+身为高级玩家的你，难道玩腻了 osu!lazer 的四个标准模式吗？
+
+没关系，**游戏模式不够，Ruleset 来凑！** 这篇文章会带你快速了解一下 osu!lazer 中的 Ruleset 机制，以及如何利用它在 osu! 里玩上心仪的游戏模式。
+
+## 关于 Ruleset
+
 ![Version Info](img/ruleset-info.png)
 
 从 osu!lazer 开始，osu! 引入了<Highlight color="#ff66aa">**Ruleset**</Highlight> 的概念。
@@ -13,7 +19,13 @@ enableComments: true
 - Ruleset 属于 osu!lazer 的附加组件（即 *Mod / Addon*）
 - Ruleset 可以为游戏引入新功能，一般是游戏模式
 - Ruleset 是一个或一组 `.dll` 动态链接库文件
-- Ruleset 不受 osu! 官方支持（也就是说不会随 osu! 更新）
+- Ruleset 不受 osu! 官方支持（也就是说需要手动更新）
+
+:::info 想做一个吗？
+
+如果你对 Ruleset 的开发有兴趣，可以看看我们的[开发指南](../dev-tutorial/ruleset)。
+
+:::
 
 ## 获取
 
@@ -21,7 +33,7 @@ enableComments: true
 
 :::warning 注意
 
-介于 Ruleset 插件的性质：
+鉴于 Ruleset 插件的性质：
 
 - Ruleset 可能与你的版本游戏不兼容
 - Ruleset 可能导致游戏无法正常使用某些功能（如分数提交）或报错
@@ -51,9 +63,11 @@ Ruleset 所在仓库一般都是以 C# 项目的形式呈现，你可以将这�
 
 生成成功后，你就可以在项目目录找到生成的 Ruleset 文件，它通常位于 `<项目目录>/bin/Debug` 目录下。
 
-### 自动
+若目录下有生成多个 Ruleset 文件，则要将它们**全部**复制到 Ruleset 目录。
 
-使用外部工具获取并管理 Ruleset。Windows 环境下比较好用的工具是 [osu! ModeManager](https://github.com/starflash-studios/Osu-ModeManager)。
+### 使用工具
+
+使用外部工具获取并管理 Ruleset。Windows 平台下比较好用的工具是 [osu! ModeManager](https://github.com/starflash-studios/Osu-ModeManager)。
 
 :::tip 支持
 
@@ -118,7 +132,7 @@ osu! ModeManager 的原作者 [starflash-studios](https://github.com/starflash-s
 
 这里指你自己将 Ruleset 文件放到 osu!lazer 的目录。
 
-Windows 环境一般情况下，osu!lazer 的文件目录位于 `<用户根目录>/AppData/Local/osulazer`。选择你要使用 Ruleset 的版本文件夹并进入，然后将 Ruleset 的**所有**文件放在其中即可。
+Windows 环境一般情况下，osu!lazer 的文件目录位于 `<用户根目录>/AppData/Roaming/osu`，其中有一个 `Ruleset` 目录用来存放外部 Ruleset。在这里将 Ruleset 的**所有**文件放在其中即可。
 
 :::info 提示
 
@@ -134,15 +148,23 @@ Windows 环境一般情况下，osu!lazer 的文件目录位于 `<用户根目�
 
 - 游戏弹出通知，提示有错误发生
 - Ruleset 的图标没有出现（通常伴随着上一种现象）
-- 游戏无法启动
+- 游戏无法启动或中途崩溃
 
 那么可能是 Ruleset 本身出了问题。请参照下文进行修复。
 
 ## 修复
 
-如果是 Ruleset 导致 osu!lazer 出错，在不影响正常游玩体验的情况下一般可以忽略。若出现了比较严重的问题（如连续出现错误通知，游戏无法启动等），请考虑手动修复。
+:::info osu!lazer 的 Ruleset 处理
 
-- 打开该版本的 osu!lazer 所在目录（如上文所述）
+当一个 Ruleset 的错误导致了整个游戏崩溃，osu!lazer 会定位到这个出问题的文件，并在其文件名末尾附加 `.broken` 后缀以将其标为已损坏；在后续启动游戏时，也会弹出通知提醒你这个 Ruleset 被禁用了。
+
+如果你想将其重新启用，只需将这个后缀去掉即可。
+
+:::
+
+如果是 Ruleset 导致 osu!lazer 出错，在不影响正常游玩体验的情况下一般可以忽略。当 Ruleset 导致游戏出现严重问题时，osu!lazer 也会通过自动禁用这个 Ruleset 尽力解决问题。但如果问题没有解决（如连续出现错误通知，游戏无法启动等），请考虑手动修复。
+
+- 打开该版本的 osu!lazer Ruleset 所在目录（如上文所述）
 - 找到你最近安装的 Ruleset 文件（一般来说按修改时间排序容易找到）
 - 将你认为有问题的文件删除
 - 尝试启动 osu!lazer
@@ -155,4 +177,4 @@ Windows 环境一般情况下，osu!lazer 的文件目录位于 `<用户根目�
 
 :::
 
-如果你有一些基本的开发能力，想将这个问题报告给开发者，可以去找 osu!lazer 事发时的日志文件，与问题描述一起提交到 Ruleset 所在仓库。
+如果你有一些基本的开发能力，想将这个问题报告给开发者，可以去找 osu!lazer 出现错误时的日志文件，与问题描述一起提交到 Ruleset 所在仓库。

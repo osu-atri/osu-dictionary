@@ -3,46 +3,65 @@ sidebar_position: 2
 enableComments: true
 ---
 
-# 说的道理教你写小部件
+# 从零到一写第一个小组件
 
-:::note 🤔
+:::info 关于 C# 的技术细节
 
-大家好啊，我是复予。
+这篇文章假设你已经掌握了基本的开发流程，并且对 C# 的语言特性有一定的了解，因此对一些软件开发方面的名词不会过多解释。
 
-今天有点忙来不及写文章了，就让咱们的赛博生命**说的道理** (Short Dolly) 来帮忙写写下面的内容吧...
-
-诶不是哥们我
+如果你没有理解一些内容，请考虑在 C# 文档中查阅相关信息。
 
 :::
 
-大家好啊，我是说的道理。今天来点大家想看的东西啊。
+:::info 信息
 
-小部件 (**Widget**，维吉特) 说的道理是用户界面 (**User Interface**，有爱) 上的一部分显示内容啊，从设计层面上来讲，是一个小的组成单元啊。今天就来带带各位给 osu!lazer 写一个小部件啊。
+这篇文章曾是一篇文风奇差无比、拙劣捧哏充斥其间的梗文，现已经过完全重写。
+
+如果读者你对这篇文章的原版感兴趣（并且你真的特别想读），请到这个仓库的提交记录里自行查找。
+
+关于这篇文章的心路历程，参见我的博客（链接待补充）。
+
+![你好](img/yhapa.png)
+
+:::
+
+提到小组件，大家会想到什么呢？相信用过图形界面的各位，对这个术语应该是很熟悉的。
+
+简单来说，小组件 (**Widget**) 是图形用户界面的一个组成部分，用来显示一些信息，以及实现部分交互的功能。在这篇文章中，笔者我将会着手带你写一个简单的小组件。
+
+在众多的小组件类型中，最简单的是文本显示类（并驾齐驱的还有各类图标显示等等），因此我们以做一个这样的组件为目标。
 
 ## 类初始化
 
-手先，我们在 `Ottoman`（电棍南）项目里建一个类文件，为什么要在这里建啊：
+在 osu!lazer 的框架结构中，一个小组件的实现通常通过一个类来实现，这里拿我们在 Ruleset 开发中的 `Ottoman` 项目举个例子。没读过那里的内容也没关系，这篇文章讲述的内容是相对基础与独立的。
 
-- Ruleset（如嗯塞特）项目给咱们提供了一个很好的测试环境啊，里面依赖、基本组件啥的什么都有啊。
+### 选址
+
+在考虑组件类实现的功能之前，需要先确定组件类要定义的位置。
+
+初次上手，建议你先 Fork 一下 osu!lazer 本体的源码仓库，下载到本地并在其上做更改，这样你新写的组件可以轻易在游戏界面的各处使用。在驾轻就熟之后，你也可以尝试在其他地方去做：
+
+- osu!framework
+- 独立的 Ruleset 项目
 
 :::info 说明
 
-复予：实际上由于 Ruleset 输出的是类库文件，除非使用自动化脚本把输出库文件移动到 lazer 目录，否则每次手动操作替换还是有点麻烦的。
+之所以使用 osu!lazer 的源码，是因为测试时直接构建运行就好了，步骤简单方便。不过相应的构建时间会有点长，不够“轻量”。
 
-因此这里有另外的方法是使用 osu!lazer 的源码，在其中创建组件类，放在恰当方便的位置，测试时直接构建运行就好了，不过相应的构建时间会有点长，不够“轻量”。
+实际上由于 Ruleset 输出的是类库文件，除非使用自动化脚本把输出库文件移动到 lazer 目录，否则每次手动操作替换还是有点麻烦的。
 
 如果你想的话，也可以在整个解决方案里开一个这样的项目，然后加依赖与引用就行了。当然这个方法我没多测，需要后续研究。
 
 :::
 
-啊！怎么有一个叫复予的击败在这里开大！大家不要听这个真纪头的话，我们的教程无法被定义！
+### 基础代码
 
-好，我们接下来新建一个类文件，比如说的道理维吉特：
+确定选址之后，就可以创建一个类文件，基本结构如下：
 
-```csharp title="osu.Game.Rulesets.Ottoman/Components/ShortDollyWidget.cs"
+```csharp title="osu.Game/Graphics/ShortDollyWidget.cs"
 using osu.Framework.Graphics.Containers;
 
-namespace osu.Game.Rulesets.Ottoman.Components
+namespace osu.Game.Graphics
 {
     public partial class ShortDollyWidget : CompositeDrawable
     {
@@ -50,7 +69,7 @@ namespace osu.Game.Rulesets.Ottoman.Components
 }
 ```
 
-引用（实现或者继承）这个 `CompositeDrawable` 是为了接续使用它的属性和方法啊。
+`CompositeDrawable` 是在组件开发中经常继承（实现）的一个类，其中包含我们经常使用的属性与方法。
 
 :::tip 问题
 
@@ -93,16 +112,19 @@ namespace osu.Game.Tournament.Screens.Board
 - 测试方便？
 
 上面这些内容出于 AI，暂时没摸透，有懂哥的话可以在评论区交流交流。
+
+这部分内容作为 osu!framework 的一个底层特性，会在另外的部分解释。
+
 :::
 
-## 加载函数
+## 加载元素
 
-不是你恶心人有个度啊！
+一个小组件是由若干元素（子组件）组成的，同时拥有其自己的属性。在创建组件类的实例时，这些内容需要被按需设置。
 
-好，接下来来写加载 (**Load**，罗德) 函数啊。
+一种典型的情况是使用带 `BackgroundDependencyLoader` 属性标注 (**Annotation**) 的方法进行加载。出于其功能与可见范围，我们一般将其命名为 `load()`：
 
-```csharp
-namespace osu.Game.Tournament.Components
+```csharp title="osu.Game/Graphics/ShortDollyWidget.cs"
+namespace osu.Game.Graphics
 {
     public partial class ShortDollyWidget : CompositeDrawable
     {
@@ -115,21 +137,21 @@ namespace osu.Game.Tournament.Components
 }
 ```
 
-这里要加一个 `BackgroundDependencyLoader` 标注 (**Annotation**，嗯诺特什) 可以让电棍类能够使用这个方法初始化啊。
-
-:::tip 正经的提示
+:::tip `BackgroundDependencyLoader` 原理简述
 
 带有 `[BackgroundDependencyLoader]` 标注的函数，在类初始化后会先行执行，准备好后续步骤需要的一些东西。
 
-如果一个类里面加了多个这样的标注，则会按**定义**的顺序依次执行。可以通过写能够输出日志（或者其他途径）的方法来测试。
+一个组件类中仅可有一个带有这样标签的函数，且这个函数必须是 `private` 可见。
+
+详情请见这篇文章（待补充）。
 
 :::
 
-不管怎样，现在给大家一点想看的东西啊。加载函数里面有一些定义组件属性的语句啊，比如锚点 (**Anchor**，安史)、原点 (**Origin**，嗷嘞进)、子元素 (**Children**，抽真) 之类的啊，会在以后的开发过程中起很大作用的啊。
+在这个函数中，我们可以想到更改组件的锚点 (**Anchor**)、原点 (**Origin**)、子元素 (**Children**)，这些内容可以帮助定下组件的大致样式。
 
-osu!lazer 同时也提供了很多能直接使用的组件类啊，这里我们使用一下它给的文本组件 `SpriteText` 啊。
+与此同时，osu!lazer 也提供了很多能直接使用的组件类，例如文本显示类 `OsuSpriteText`。
 
-```csharp title="nm$lclass"
+```csharp title="ShortDollyWidget.cs"
 /// Truncated
         [BackgroundDependencyLoader]
         private void load()
@@ -140,7 +162,7 @@ osu!lazer 同时也提供了很多能直接使用的组件类啊，这里我们�
 
             InternalChildren = new Drawable[]
             {
-                // 怎么画红线了？我阐释你的梦！
+                // 请不要使用
                 // new SpriteText
                 new OsuSpriteText
                 {
@@ -151,60 +173,24 @@ osu!lazer 同时也提供了很多能直接使用的组件类啊，这里我们�
 /// Truncated
 ```
 
-哇袄！牛魔 ppy，`SpriteText` 为什么不能用啊，为什么啊？
+`InternalChildren` 列出了这个组件中包含的子组件，它们将会按各自定义的属性进行显示。
 
-## 成果展示
+:::info 为什么不是 `SpriteText`
 
-总之最后是做好了，看一下效果：
+`SpriteText` 类定义在 osu!framework 中，是其他各种文本显示组件的基本组成部分，直接使用其显示文本会显得比较危险，同时也不利于管理，因此在项目层面 Ban 掉了这个类的直接使用（写在 `CodeAnalysis` 的 `BannedSymbols.txt` 里，因此说是项目层面）。
+
+针对这样的情况，开发者由此衍生出了 `OsuSpriteText` 类，默认使用带阴影的默认字体，在整个项目范围内广泛使用。与此相似的还有赛事客户端项目中的 `TournamentSpriteText` 类。
+
+:::
+
+## 效果展示
+
+到此为止，组件类方面的工作已经大致完成。但要将其显示在哪里，我们还要在另一个组件的 `Children` 或 `InternalChildren` 中引用它，按照上面的方法即可，这里不再赘述。
+
+在写完这些代码之后，构建项目，转到你添加到的组件所在界面，应该能看到如下图的文本：
 
 ![道理](img/dollyText.png)
 
-什么？你问锚点和原点是什么意思，`InternalChildren` 又是什么？铸币吧，怎么这么菜啊！菜就多练懂不懂啊。**我们的教程，还有说的道理，是无法被定义的！**
+用过 osu!lazer 赛事客户端的读者应该熟悉，笔者将这个组件加到了 `TournamentSceneManager` 的子组件列表里（虽然实际开发中不推荐这么做，这里只是为了示例简单需要）。
 
-啊阿吖！没出生在我心s\~
-
-哈姆\~一呼相当饿\~
-
-啊你，也列拿fish
-
-黑波比麻fishes
-
-啊米浴说的道理！
-
-啊wish，多多wish！
-
-啊饿~好饿一食得当
-
-啊嘛啊！波比是我爹
-
-啊~喵内地手啊呵呵木有
-
-:::info ❔
-
-复予：一眼顶针，鉴定为缺爱了。
-
-你等着，我马上就来。
-
-:::
-
-啊哥们我错啦！下次还敢\~
-
-哈哈哈哈哈哈哈，哈哈哈，哈喝\~开玩笑的说，区区一个小杂鱼能怎么我了。
-
-:::tip 希望你真的是在开玩笑
-
-![你好](img/yhapa.png)
-
-WW91IGtub3cgd2hhdCB0byBkbyBuZXh0LiBIZXJlIGlzIHlvdXIgZmxhZzoKZmxhZ3tYaW9uZ19EaV9YaWFuZ19DaGFuX1NoaV9OaX0K
-
-:::
-
-不行！不\~行！啊在颤抖，我的身体队友呢队友呢救一下啊啊，啊，哇袄！
-
----
-
-孩子们，我是复予，我回来了。
-
-道理写的内容其实主要部分没有问题，不过加载函数的写法是有些过于随意了，以至于不符合我们期望的设计规范，有些地方的解释也不是很到位，总之不是好教程就是了。
-
-漏出来的部分，接下来的文章会好好接下的。
+看完这些内容，你是否也有很多疑惑呢？我们会在后续的文章中详细解释它们，敬请期待。

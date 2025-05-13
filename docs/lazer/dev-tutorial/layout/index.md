@@ -5,7 +5,7 @@ enableComments: true
 
 # 布局与界面设计
 
-osu!lazer 的布局框架究竟是个什么样子，沐雨酱搞了两个多月，也并没有完全搞清楚。可能用 FillFlowContainer 与相对坐标的思路比较好，搞了个大舞台，可惜后来冒烟起火了...
+osu!lazer 的布局框架究竟是个什么样子，沐雨酱搞了快一年了，也并没有完全搞清楚。可能用 FillFlowContainer 与相对坐标的思路比较好，搞了个大舞台，可惜后来冒烟起火了...
 
 ...大型纪录片：《将设计进行到底》，正在播出...
 
@@ -28,6 +28,7 @@ flowchart LR
   designByDrawing("图像绘制")
   vectorGraph("矢量图设计")
   designByCoding("抽象代码")
+  shaderCode("着色器代码")
   markdownDocument("Markdown 文档")
   componentClass("UI 组件类<br />（多见于默认与模版组件）")
   textureStore("材质包")
@@ -43,12 +44,14 @@ flowchart LR
   indirectDesign --> vectorGraph
   indirectDesign --> markdownDocument
   indirectDesign --> designByCoding
+  indirectDesign --> shaderCode
   designByDrawing -- 打包 --> textureStore
   vectorGraph -- 转化后（可能）打包 --> textureStore
 
   textureStore -- 加载 --> lazerUI
   lazerUIEditor -- 自定义 --> lazerUI
   designByCoding -- 构建 --> componentClass
+  shaderCode -- GL 绘制 --> lazerUI
   componentClass -- 引用与实例化 --> lazerUI
   markdownDocument -- 渲染器渲染 --> lazerUI
 ```
@@ -60,8 +63,6 @@ flowchart LR
 - 精准直接：各个组件的属性都通过代码定义
 - 易于复用：一个组件类可以在多个组件与界面使用
 - 预览不易：每次更改之后需要将所在项目重新构建，出错的话需要通过日志/调试定位（有时甚至难以定位，谜语人了解一下）
-
-总之，希望这系列文章能帮你设计出不错的 osu!lazer 界面与组件😋
 
 ## 我阐释你的码
 
