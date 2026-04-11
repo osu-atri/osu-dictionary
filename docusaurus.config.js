@@ -16,7 +16,7 @@ const config = {
 
   // Set the production url of your site here
   // TODO: Change this part
-  url: "https://localhost:3000/",
+  url: "https://osu-atri.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/osu-dictionary/",
@@ -36,25 +36,17 @@ const config = {
     },
   },
 
+  storage: {
+    type: "localStorage",
+    namespace: true,
+  },
+
   future: {
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
       useCssCascadeLayers: true,
     },
-    experimental_faster: {
-      swcJsLoader: true,
-      swcJsMinimizer: true,
-      swcHtmlMinimizer: true,
-      lightningCssMinimizer: true,
-      rspackBundler: true,
-      rspackPersistentCache: true,
-      ssgWorkerThreads: true,
-      mdxCrossCompilerCache: true,
-    },
-    experimental_storage: {
-      type: "localStorage",
-      namespace: true,
-    },
+    faster: true,
   },
 
   // Even if you don't use internationalization, you can use this field to set
@@ -81,9 +73,10 @@ const config = {
             frontMatter.hide_reading_time
               ? undefined
               : defaultReadingTime({
-                  content,
-                  options: { wordsPerMinute: 450 },
-                }),
+                content,
+                options: { wordsPerMinute: 450 },
+                locale: "zh-Hans"
+              }),
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -92,9 +85,6 @@ const config = {
     ],
   ],
 
-  markdown: {
-    mermaid: true,
-  },
   themes: ["@docusaurus/theme-mermaid"],
 
   themeConfig:
