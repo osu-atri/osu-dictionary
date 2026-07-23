@@ -64,30 +64,23 @@
   }
 
   .hero {
-    background: rgba(83, 44, 62, 0.6);
-    background-repeat: no-repeat;
+    background: rgba(83, 44, 62, 0.6) no-repeat;
     background-size: cover;
   }
 
   .navbar {
-    background: rgba(255, 179, 212, 0.6);
     backdrop-filter: blur(25px);
-    background-image: url("assets/trianglesNavbar.png");
-    background-position: bottom;
     background-size: auto 100%;
-    background-repeat: repeat-x;
+    background: rgba(255, 179, 212, 0.6) url("assets/trianglesNavbar.png") repeat-x bottom;
     /*filter: hue-rotate(0deg) saturate(.5);*/
   }
 
   .navbar-sidebar {
     bottom: auto;
     .navbar-sidebar__brand {
-      background: rgba(255, 179, 212, 0.6);
       backdrop-filter: blur(25px);
-      background-image: url("assets/trianglesNavbar.png");
-      background-position: bottom;
       background-size: auto 100%;
-      background-repeat: repeat-x;
+      background: rgba(255, 179, 212, 0.6) url("assets/trianglesNavbar.png") repeat-x bottom;
     }
   }
 
@@ -113,24 +106,18 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   .navbar {
-    background: rgba(83, 44, 62, 0.6);
     backdrop-filter: blur(25px);
-    background-image: url("assets/trianglesNavbar.png");
-    background-position: bottom;
     background-size: auto 100%;
-    background-repeat: repeat-x;
+    background: rgba(83, 44, 62, 0.6) url("assets/trianglesNavbar.png") repeat-x bottom;
     /*filter: hue-rotate(0deg) saturate(.5);*/
   }
 
   .navbar-sidebar {
     bottom: auto;
     .navbar-sidebar__brand {
-      background: rgba(255, 179, 212, 0.6);
       backdrop-filter: blur(25px);
-      background-image: url("assets/trianglesNavbar.png");
-      background-position: bottom;
       background-size: auto 100%;
-      background-repeat: repeat-x;
+      background: rgba(255, 179, 212, 0.6) url("assets/trianglesNavbar.png") repeat-x bottom;
     }
   }
 

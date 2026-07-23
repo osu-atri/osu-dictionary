@@ -15,7 +15,6 @@ const config = {
   favicon: common.icon,
 
   // Set the production url of your site here
-  // TODO: Change this part
   url: "https://osu-atri.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
