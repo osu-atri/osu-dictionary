@@ -7,7 +7,7 @@ export default function GiscusComponent() {
 
   return (
     <Giscus
-      repo="osu-atri/osu-dictionary"
+      repo="osu-atri/osu-atri.github.io"
       repoId="R_kgDOMN7Jkg"
       category="General"
       categoryId="DIC_kwDOMN7Jks4CgXXQ"

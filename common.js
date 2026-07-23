@@ -4,11 +4,11 @@
  * Note: All relative paths are based on "static/".
  */
 const common = {
-  title: "osu!dictionary",
-  description: "为 osu! 爱好者准备的简明词典",
+  title: "osu!ATRI",
+  description: "欢迎来到 osu!ATRI 翻译组首页",
   icon: "img/site-logo.png",
   cardbanner: "img/card.png",
-  src: "https://github.com/osu-atri/osu-dictionary",
+  src: "https://github.com/osu-atri/osu-atri.github.io",
   contact: {
     github_org: "https://github.com/osu-atri",
     github_join:

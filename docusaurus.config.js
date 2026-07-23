@@ -8,7 +8,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 const common = require("./common.js");
 
-/** @type {import('@docusaurus/types').Config} */
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
 const config = {
   title: common.title,
   tagline: common.description,
@@ -18,11 +18,11 @@ const config = {
   url: "https://osu-atri.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/osu-dictionary/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   organizationName: "osu-atri", // Usually your GitHub org/user name.
-  projectName: "osu-dictionary", // Usually your repo name.
+  projectName: "osu-atri.github.io", // Usually your repo name.
 
   onBrokenLinks: "throw",
 
@@ -58,13 +58,13 @@ const config = {
 
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: "./sidebars.js",
           // The base URL to the project root.
-          editUrl: "https://github.com/osu-atri/osu-dictionary/tree/main/",
+          editUrl: "https://github.com/osu-atri/osu-atri.github.io/tree/main/",
         },
         blog: {
           showReadingTime: true,

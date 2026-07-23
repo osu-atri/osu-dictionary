@@ -1,4 +1,4 @@
-# osu-dictionary
+# osu! ATRI Website
 
 Rebuilt of repository "osu-dictionary" with fresh Docusaurus framework!
 
