@@ -72,10 +72,10 @@ const config = {
             frontMatter.hide_reading_time
               ? undefined
               : defaultReadingTime({
-                content,
-                options: { wordsPerMinute: 450 },
-                locale: "zh-Hans"
-              }),
+                  content,
+                  options: { wordsPerMinute: 450 },
+                  locale: "zh-Hans",
+                }),
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -131,13 +131,12 @@ const config = {
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "mainSidebar",
+            to: "/docs/about",
+            label: "关于我们",
             position: "left",
-            label: "文档",
           },
           {
-            to: "/docs/termtable",
+            to: "/docs/dictionary",
             label: "术语表",
             position: "left",
           },
@@ -166,10 +165,14 @@ const config = {
             items: [
               {
                 label: "术语表",
-                to: "/docs",
+                to: "/docs/dictionary",
               },
               {
-                label: "新闻翻译",
+                label: "osu!lazer 食用指南",
+                to: "/docs/lazer",
+              },
+              {
+                label: "新闻翻译·存档",
                 to: "/blog",
               },
             ],

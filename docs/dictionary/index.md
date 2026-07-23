@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 enableComments: true
-displayed_sidebar: termtableSidebar
+displayed_sidebar: dictionarySidebar
 ---
 
 # osu! 中英翻译术语表
