@@ -6,21 +6,25 @@ sidebar_position: 4
 
 | 英文 | 中文 | 备注 |
 | :-- | :-- | :-- |
-| Gameplay | 游玩（过程） |  |
-| Game modifier (Mods) | （游戏）模组 |  |
-| Tournament | 赛事，锦标赛 |  |
+| Gameplay | 游玩（过程） | |
+| Game modifier (Mods) | （游戏）模组 | |
+| FreeMods | 可选模组 | 多人游戏特性，玩家可自由选择模组 |
+| ForceMods | 必选模组 | 多人游戏特性，玩家至少应选择的模组 |
+| Tournament | 赛事，锦标赛 | |
+| Ruleset | 游戏模式 | lazer 专有术语 |
+| Freestyle | 自由发挥 | lazer 多人游戏特性，可选择指定谱面集下的难度与游戏模式 |
 
 ## 元素 {#element}
 
 | 英文 | 中文 | 备注 |
 | :-- | :-- | :-- |
-| Health | 血量，生命值 |  |
+| Health | 血量，生命值 | |
 | Score | 分数，成绩 | [^context-score] |
-| Grade | 评级，等级，评价 |  |
-| Judgement | 判定 |  |
-| **(PP)** Performance points | 表现分 |  |
-| Hit circle | 圆圈，打击圈 |  |
-| Approach circle | 缩圈 |  |
+| Grade | 评级，等级，评价 | |
+| Judgement | 判定 | |
+| **(PP)** Performance points | 表现分 | |
+| Hit circle | 圆圈，打击圈 | |
+| Approach circle | 缩圈 | |
 | Slider | 滑条 | 译同 osu!taiko 中的 Drumrolls |
 | Spinner | 转盘 | 译同 osu!taiko 中的 Denden |
 | Fruit | 大果，水果 | osu!catch 中的圆圈 |
@@ -34,11 +38,13 @@ sidebar_position: 4
 
 | 英文 | 中文 | 备注 |
 | :-- | :-- | :-- |
-| Seeding | 选种 |  |
-| Badge weighted seeding (**BWS**) | 奖牌加权选种 |  |
+| Seeding | 选种 | |
+| Badge weighted seeding (**BWS**) | 奖牌加权选种 | |
 | Acronym | 缩写 | 通常指将队伍的全名缩写为三个英文字符，便于部分资源管理[^image-names]与其他情况使用 |
 | Drawings | 抽签 | 即随机将队伍分组 |
 | Mappool | 图池 | 赛事过程中可选谱面的集合（池） |
+| Tournament sanctions | 赛事处罚 | |
+| Hosting bans | 主办资格观察期 | 字面意思，禁赛但指的是主办比赛 |
 
 ### 流程 {#routine}
 
@@ -48,8 +54,8 @@ sidebar_position: 4
 | :-- | :-- | :-- |
 | Pick | 选图 | 选择在此局游玩这张图，用于结算 |
 | Ban | 禁图 | 禁止在本场比赛后续过程中选择这张图 |
-| FF[^ff-fullname] | 投降 | 主动放弃该局，并默认对方获胜 |
+| Forfeit (*FF*)[^ff-fullname] | 投降 | 主动放弃该局，并默认对方获胜 |
 
 [^context-score]: 根据语境，有时可以特指一次游玩过程，如 `成绩对应的回放`
-[^ff-fullname]: `FF` 来自于 LOL 网游，其实是 `forfeit` 的缩写，意思是失去名誉、权利等，这里指主动放弃对局最终获胜的机会
+[^ff-fullname]: 来自于 LOL 网游，字面义为失去名誉、权利等，这里指主动放弃对局最终获胜的机会
 [^image-names]: 在 osu!lazer 的比赛客户端中，会使用队伍编辑器 (*Team Editor*) 中为各个队伍设置的缩写，调用 `Flags` 文件夹下同名的图像文件，作为队旗显示在相应区域。

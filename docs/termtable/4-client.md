@@ -11,10 +11,10 @@ sidebar_position: 5
 | 英文 | 中文 | 备注 |
 | :-- | :-- | :-- |
 | Stable | 稳定版 | 每月更新 |
-| Beta | 候选版 | 每周更新 |
+| Beta | 候选版 | 每周更新（**已经没有力**） |
 | Cutting edge | 测试版 | 不定期更新 |
-| osu!stable (stable) | **不译** |  |
-| osu!lazer (lazer) | **不译** |  |
+| osu!stable (stable) | **不译** | |
+| osu!lazer (lazer) | **不译** | |
 
 ## 界面 {#interface}
 
@@ -22,7 +22,8 @@ sidebar_position: 5
 | :-- | :-- | :-- |
 | Overlay | 覆盖层，叠加层 | 根据语境，有时可简译为**界面，层** |
 | Screen | 屏幕，*界面，页面* | 根据语境决定[^context-screen] |
-| Pop-up  | 弹出窗口，弹出框 |  |
+| Pop-up | 弹出窗口，弹出框 | |
+| Dialog | 对话框 | |
 
 ## 谱面编辑器 {#editor}
 
@@ -41,11 +42,11 @@ sidebar_position: 5
 
 | 英文 | 中文 | 备注 |
 | :-- | :-- | :-- |
-| Beat Snap Divisor | 音符时值，节拍细分 |  |
-| Distance Snap | 固定间距，间距锁定 |  |
-| Grid Snap | 网格对齐 |  |
-| Timeline | 时间线 |  |
-| StoryBoard Load **(SB Load)** | 故事板负载 |  |
+| Beat Snap Divisor | 音符时值，节拍细分 | |
+| Distance Snap | 固定间距，间距锁定 | |
+| Grid Snap | 网格对齐 | |
+| Timeline | 时间线 | |
+| StoryBoard Load **(SB Load)** | 故事板负载 | |
 | (**BSS**) Beatmap Submission System | 谱面提交系统 | 在客户端中上传谱面的工具 |
 
 ### 菜单项 {#menu}
