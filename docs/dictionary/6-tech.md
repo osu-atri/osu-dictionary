@@ -6,7 +6,7 @@ sidebar_position: 7
 
 osu! 涉及的专业领域术语。
 
-## 乐理 {#music}
+## 乐理与音效 {#music}
 
 音乐理论 (**Music Theory**)，详见 [wiki](https://osu.ppy.sh/wiki/zh/Music_theory)
 
@@ -16,6 +16,8 @@ osu! 涉及的专业领域术语。
 | Downbeat | 强拍，下拍 | 通常是小节的第一拍 |
 | Upbeat | 弱拍，上拍 | 通常跟在强拍之后 |
 | Chorus | 副歌，合唱 | 现阶段以*副歌*意为主 |
+| Sample | 音效（采样） | 一个具体的声音，如 `whistle` / `finish` / `clap` |
+| Bank (or **Sample bank**) | 音色组 / 音效库 | 一组音效的集合，控制使用的音效风格，如 `normal` / `soft` / `drum` |
 
 ## 多媒体 {#media}
 
